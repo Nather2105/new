@@ -1,0 +1,82 @@
+#include<stdio.h>
+
+int main ()
+{
+    srand(time(NULL));
+    int a=rand()%12+1;
+    
+    printf("%d\n",a);
+    
+    if (a==1){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the first 4 coins is easier, that why next step is weigh 1 2 and 3 4\n");
+      printf("coins 1 and 2 easier, weigh 1 and 2\n");
+      printf("%d is wrong coin",a);}
+      
+    if (a==2){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the first 4 coins is easier, that why next step is weigh 1 2 and 3 4\n");
+      printf("coins 1 and 2 easier, weigh 1 and 2\n");
+      printf("%d is wrong coin",a);}
+
+    if (a==3){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the first 4 coins is easier, that why next step is weigh 1 2 and 3 4\n");
+      printf("coins 3 and 4 easier, weigh 3 and 4\n");
+      printf("%d is wrong coin",a);}
+    
+    if (a==4){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the first 4 coins is easier, that why next step is weigh 1 2 and 3 4\n");
+      printf("coins 3 and 4 easier, weigh 3 and 4\n");
+      printf("%d is wrong coin",a);}
+
+    if (a==5){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the second 4 coins is easier, that why next step is weigh 5 6  and 7 8\n");
+      printf("coins 5 and 6 easier, weigh 5 and 6\n");
+      printf("%d is wrong coin",a);}
+    
+    if (a==6){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the second 4 coins is easier, that why next step is weigh 5 6  and 7 8\n");
+      printf("coins 5 and 6 easier, weigh 5 and 6\n");
+      printf("%d is wrong coin",a);}
+    
+    if (a==7){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the second 4 coins is easier, that why next step is weigh 5 6  and 7 8\n");
+      printf("coins 7 and 8 easier, weigh 7 and 8\n");
+      printf("%d is wrong coin",a);}
+    
+     if (a==8){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the second 4 coins is easier, that why next step is weigh 5 6  and 7 8\n");
+      printf("coins 7 and 8 easier, weigh 7 and 8\n");
+      printf("%d is wrong coin",a);}
+    
+     if (a==9){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the first and the second 4 coins is the same, that why next step is weigh 9 10  and 11 12\n");
+      printf("coins 9 and 10 easier, weigh 9 and 10\n");
+      printf("%d is wrong coin",a);}
+    
+    if (a==10){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the first and the second 4 coins is the same, that why next step is weigh 9 10  and 11 12\n");
+      printf("coins 9 and 10 easier, weigh 9 and 10\n");
+      printf("%d is wrong coin",a);}
+      
+    if (a==11){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the first and the second 4 coins is the same, that why next step is weigh 9 10  and 11 12\n");
+      printf("coins 11 and 12 easier, weigh 11 and 12\n");
+      printf("%d is wrong coin",a);}
+    
+        if (a==12){
+      printf("let's weigh 1 2 3 4 and 5 6 7 8\n");
+      printf("the first and the second 4 coins is the same, that why next step is weigh 9 10  and 11 12\n");
+      printf("coins 11 and 12 easier, weigh 11 and 12\n");
+      printf("%d is wrong coin",a);}
+      
+      

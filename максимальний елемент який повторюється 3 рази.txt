@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int i, res[100], n,  count, max, ozn, j;
+
+	scanf_s("%d", &n);
+	srand(time(NULL));
+
+	for (i = 0; i < n; i++) {
+		res[i] = rand() % 30 ;
+		printf("%d ", res[i]);
+	}
+	for (i = 0, ozn = 0; i < n; i++) {
+		for (j = 0, count = 0; j < n; j++) {
+			if (res[i] == res[j]) count += 1;
+		}
+		if (count == 3) {
+			printf("\nkandudat:res[%d]=%d", i,res[i]);
+			if (ozn == 0) {
+				ozn = 1;
+				max = res[i];
+				printf("\nmax=%d i=%d", max, i);
+			}
+			else {
+				if (res[i] > max) {
+					max = res[i];
+					printf("\nmax=%d i=%d", max,i);
+				}
+			}
+		}
+	}
+	if (ozn) printf("\nmax=%d", max);
+	else printf("\nno");
+	return 0;
+}
+
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+		int main()
+		{
+			int i, res[100], sum, min,min_i, max, count, n;
+
+			scanf_s("%d", &n);
+			srand(time(NULL));
+
+			for (i = 0; i < n; i++) {
+				res[i] = rand() % 9 + 2;
+				printf("%d ", res[i]);
+			}
+
+			for (i = 0, min_i = 0; i < n; i++) {
+				if (res[i] <= res[min_i]) {
+					min_i = i;	
+				}
+			}
+			count = n - min_i - 1;
+
+
+			printf("\nmin=%d\ncount=%d", min_i, count);
+		}

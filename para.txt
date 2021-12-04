@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include<time.h>
+int main() {
+	int i,n,m,j;
+	int nums[100];
+	scanf_s("%d", &n);
+	m = n;
+	i = 0;
+	while (m>0) {
+		nums[i] = m % 10;
+		m /= 10;
+	//	printf("%d ", nums[i]);
+		i++;
+	}
+	for (j = i-1; j >= 0; j--) {
+		if (j == 0) {
+			printf("%d*10^%d = %d", nums[j], j,n);
+		}
+		else {
+			printf("%d*10^%d + ", nums[j], j);
+		}
+	}
+
+	return 0;
+}

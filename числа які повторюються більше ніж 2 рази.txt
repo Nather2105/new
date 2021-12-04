@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int i, res[100], n, count, j;
+	int arr_dif[100], n_dif;
+	int fl,fl2;
+
+	scanf_s("%d", &n);
+	srand(time(NULL));
+    
+	for (i = 0; i < n; i++) {
+		res[i] = rand() % 9 + 2;
+		printf("%d ", res[i]);
+	}
+	printf("\n");
+	for (i = 0, n_dif=0, count = 0; i < n; i++) {
+		for (j = 0,fl=0; j < n; j++) {
+			if (res[i] == res[j] && i != j) {
+				fl = 1;
+				break;
+			}
+		}
+		if (fl) {
+			printf("\nkandudat=%d i=%d",res[i],i);
+			for (j = 0,fl2=0; j < n_dif; j++) {
+				if (res[i] == arr_dif[j]) {
+					fl2 = 1;
+					break;
+				}
+			}
+			if (fl2 == 0) {
+				arr_dif[n_dif++] = res[i];
+				printf("\nadding to array=%d i=%d", res[i], i);
+			}
+		}
+	}
+	for (i = 0; i < n_dif; i++) {
+		printf("%d ", arr_dif[i]);
+	}
+}

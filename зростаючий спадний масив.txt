@@ -1,0 +1,57 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+		int main()
+		{
+			int i, res[100], sum, min,min_i, max, count, n;
+
+			scanf_s("%d", &n);
+			srand(time(NULL));
+
+			for (i = 0; i < n; i++) {
+				res[i] = rand() % 9 + 2;
+				printf("%d ", res[i]);
+			}
+
+			for (i = 0; i < n-1; i++) {
+				if (res[i] >= res[i + 1]) {
+					printf("no");
+					return 0;
+				}
+
+			}
+			printf("yes");
+			return 0;
+		}
+
+
+
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+		int main()
+		{
+			int i, res[100], sum, min,min_i, max, count, n;
+
+			scanf_s("%d", &n);
+			srand(time(NULL));
+
+			for (i = 0; i < n; i++) {
+				res[i] = rand() % 9 + 2;
+				printf("%d ", res[i]);
+			}
+
+			for (i = 0; i < n-1; i++) {
+				if (res[i] <= res[i + 1]) {
+					printf("no");
+					return 0;
+				}
+
+			}
+			printf("yes");
+			return 0;
+		}
+
+

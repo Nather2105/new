@@ -1,0 +1,41 @@
+ git status --untracked-files=all
+
+cd - перейти в 
+ls- список даних в папці
+cd ..- вийти в логовну папку
+touch- создать
+# backup files
+bpm/-ігнор
+
+# img files
+img/*.jpg- ігнор
+
+ git add .- добавити дані
+ git commit -m ""- зберегти нові дані
+:wq вихід
+ git log --pretty==:"%h - %an, $ar : %s"
+git log --since=1.week
+ git log -p -2 - подивитися логи
+git checkout -b нова  гілка
+
+git merge зєднати гілки з мастером
+
+ git reset --hard ddbf9b3861e1 - розєнати гілку з мастером
+git revert HEAD~2 - заберає переміни але коміти зберігає
+
+ git rebase  - поверх мастера  накладує іншу гілку в самій гілці (без конфлікту)
+
+git rebase --interactive HEAD~4
+git rebase --abort
+git remote
+git remote remove origin
+git push origin (назва ветки)
+
+
+
+
+
+ 
+
+
+ 

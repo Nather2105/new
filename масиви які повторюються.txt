@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int i, res[100], n, count,j;
+
+	scanf_s("%d", &n);
+	srand(time(NULL));
+
+	for (i = 0; i < n; i++) {
+		res[i] = rand() % 9 + 2;
+		printf("%d ", res[i]);
+	}
+	printf("\n");
+	for (i = 0, count =-n; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			if (res[i] == res[j] && i != j) printf("res[%d]=res[%d]=%d\n", i, j, res[i]);
+		}
+	}
+	
+}

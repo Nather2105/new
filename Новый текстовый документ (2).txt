@@ -1,0 +1,58 @@
+int main()
+{
+    char *s;
+    char ss[100];
+    int n;
+    
+    //"s" 's'
+    scanf("%s", ss);
+    n = strlen(ss);
+    printf("len = %d", n);
+
+    return 0;
+}
+
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char *s = "ogo";
+    char sss[]="ogo";//={'o','g','o'}
+    int i, n;    
+#if 0    
+    void *p;
+    char ss[100], ss1[100];
+
+    char a = 'a';
+
+    s = (char *)malloc(200*sizeof(char));
+    if (!s) exit(1);
+    //s[5] *(s+5)
+    //s = p;
+    //p = s; //!
+    //"s" 's'
+    scanf("%s", ss);
+    n = strlen(ss);
+    s = ss1;
+    s = 0;
+    printf("len = %d", n);
+    printf("addr = %d", ss); 
+    
+    free(s);
+
+    n = strlen(sss);
+    printf("len = %d\n", n);    
+    //'\0'
+    for (i = 0; i<=n; i++)
+        printf("sym = %d |", sss[i]);    
+
+    sss[1] = 0;
+    n = strlen(sss);
+    printf("len = %d\n", n);    
+    //'\0'
+    for (i = 0; i<=4; i++)
+        printf("sym = %d |", sss[i]);    
+#endif
+    return 0;
+}

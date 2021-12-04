@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int i, res[100][100], n, j, min, max, count_max, count_min;
+
+	scanf_s("%d", &n);
+
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			scanf_s("%d", &res[i][j]);
+		}
+	}
+	for (i = 0, min = res[0][0], max = res[0][0]; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			printf("%d\t", res[i][j]);
+			if (res[i][j] < min) min = res[i][j];
+			if (res[i][j] > max) max = res[i][j];
+		}
+		printf("\n");
+	}
+	for (i = 0, count_min = 0, count_max = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			if (res[i][j] == min) count_min += 1;
+			if (res[i][j] == max)count_max += 1;
+		}
+	}
+	printf("\nmin=%d\nmax=%d\ncount_min=%d\ncount_max=%d", min, max, count_min, count_max);
+}

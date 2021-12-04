@@ -1,0 +1,71 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+     float x,y,res;
+    
+    scanf("%f",&y);
+    
+    x=pow(y,2);
+    res=pow((x-2.5),0.5);
+    
+    printf("res is %.2f",res);
+    
+}
+
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+     float x,y,res;
+    
+    scanf("%f",&y);
+    
+    x=pow(y,3);
+    res=pow((x+5),0.5);
+    
+    printf("res is %.2f",res);
+    
+}
+    #include<stdio.h>
+#include<math.h>
+
+int main()
+{
+     float x,y,res;
+    
+    scanf("%f",&x);
+    
+    y=pow(x,2);
+    if (x>=3){
+      printf("error");
+    }
+    else{
+    res=pow(fabs(x-10)-y,0.5);
+    printf("res is %.2f",res);
+    }
+}
+
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+     float x,res;
+    
+    scanf("%f",&x);
+    if(x<=0){
+        printf("error");
+    }
+    
+    else{ 
+    
+    res=pow(pow(x,3)-pow(x-1,0.5),0.5);
+    
+    printf("res is %.2f",res);
+    }
+}

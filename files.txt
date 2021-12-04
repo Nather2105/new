@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main(int argc,char *argv[])
+{
+	int n,i;
+	int a[100];
+	FILE *f;
+	FILE *g;
+	f = fopen("f.txt", "w+");
+	fprintf(f, "1 2 3 4 5");
+	g=fopen("g.txt","w");
+
+	for(i=0;i<n;i++) fscanf(f,"%d",&a[i]);
+	for(i=0;i<n;i++) fprintf(g,"%d",a[i]);
+    fprintf(g,"\n");
+	fclose(g);
+
+	return 0;
+}

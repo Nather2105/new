@@ -1,0 +1,337 @@
+9
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int  k, res, d;
+
+
+    scanf_s("%d", &k);
+
+    for (k, d = 0, res = 0; k > 0; k /= 10) {
+        d = (k % 10);
+        if (res < (k % 10))
+            res = (k % 10);
+    };
+    if (res == d) {
+        printf("yes");
+        return 0;
+    };
+    printf("no");
+    return 0;
+}
+
+
+
+10.1
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int  k, res, d,s1,s2,a,b;
+
+
+    scanf("%d %d", &k, &d);
+
+    if (k < d) {
+        for (k, d, s1=0,s2=0; d > 0; k /= 10, d /= 10) {
+            a = k % 10;
+            b = d % 10;
+            if (a == 5) 
+                s1 += 1;
+            
+            if (b == 5) 
+                s2 += 1;
+            
+
+        }
+    if (s1 < s2) {
+        printf("second number has more");
+    }
+    if (s2 < s1) {
+        printf("first number has more");
+    }
+        
+    }
+
+    if (d < k) {
+        for (k, d, s1=0,s2=0; k > 0; k /= 10, d /= 10) {
+            a = k % 10;
+            b = d % 10;
+            if (a == 5) 
+                s1 += 1;
+            
+            if (b == 5) 
+                s2 += 1;
+            
+
+        }
+    if (s1 < s2) {
+        printf("second number has more");
+    }
+    if (s2 < s1) {
+        printf("first number has more");
+    }
+    }
+}
+18
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int n;
+	float c;
+	for (n = 103, c = (1 / n); n > 1;  n -= 2, c = 1 / (n + c));
+	  
+
+		printf("%f", c);
+}
+
+
+16
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int m, k;
+	scanf_s("%d", &m);
+	for (k = 1; pow(4, k) < m; k++);
+	printf("%d", k);
+}
+
+10.3
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int a, b, c, d, e, g, l,s;
+
+	scanf_s("%d %d", &a, &b);
+
+	c = a % 10;
+	d = b % 10;
+
+	for (e = a, g = 1; e > 9; e /= 10) {
+		g *= 10;
+
+	};
+	
+
+	for (l = b, s = 1; l > 9; l /= 10) {
+		s *= 10;
+	}
+
+
+	a = (a - c + d) - (g * e) + (g * l);
+	b = (b - d + c) - (s * l) + (s * e);
+
+	printf("%d\n%d", a, b);
+
+}
+
+
+11
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int a, b,s;
+
+	scanf_s("%d", &a);
+
+	for (a, s = 1; a > 0;  a/=10) {
+		b = (a % 10) * s;
+		printf("%d ", b);
+		s *= 10;
+
+	};
+
+}
+
+
+
+
+13.2
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int n, k,s;
+
+	scanf_s("%d", &n);
+
+	for (k = 1, s=0; k <= n; k++) {
+		s +=(pow(-1, k)) * (2*k + 1);
+
+
+	}
+	printf("%d", s);
+}
+
+14.2
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+
+	float res, ch, zn, n, i = -1, d = 0;
+
+	scanf_s("%f", &n);
+
+	ch = pow(-1, -1);
+	zn = pow(d+1, 2);
+
+	for (i = 0, d = 1, res = ch / zn; i <= n - 2; i++) {
+		ch = pow(-1, i);
+		zn = pow((d+1), 2);
+		res *= ch / zn;
+		d *= (i + 2);
+	};
+
+	printf("%.200f", res);
+}
+
+
+
+20.5
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	
+    float i, res;
+
+	for (i = 1, res = 0; i <= ∞; i++) {
+		ch = pow(-1, i + 1);
+		zn = pow(i, 2);
+		res+=ch/zn;
+	}
+	printf("%f", res);
+}
+
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int  k,d, d_last, ozn;
+
+
+    scanf_s("%d", &k);
+
+    ozn = 1;
+    d_last = 10;
+    for (; k > 0; k /= 10) {
+        d = (k % 10);
+        printf("\nk=%d d=%d d_last=%d",k,d,d_last);
+        if (d > d_last) {
+            ozn = 0;
+            break;
+        }
+        else {
+            d_last = d;
+        }
+    };
+    if (ozn) {
+        printf("\nnot");
+    }
+    else {
+        printf("\nyes");
+    }
+    return 0;
+}
+
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int  d, num1, num1_count_5, num2_count_5, num2;
+
+    scanf("%d %d", &num1, &num2);
+    for (num1_count_5 = 0; num1 > 0; num1 /= 10) {
+        d = num1 % 10;
+        if (d == 5) {
+            num1_count_5 += 1;
+        }
+    }
+    for (num2_count_5 = 0; num2 > 0; num2 /= 10) {
+        d = num2 % 10;
+        if (d == 5) {
+            num2_count_5 += 1;
+        }
+    }
+    
+
+    return 0;
+}
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int n;
+	float res;
+	for (n = 103, res = 0; n >= 1; n -= 2) {
+		res = 1 / (n + res);
+	}
+
+
+	printf("%f", res);
+}
+
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+	int a, b,d, s,a_copy,des,count;
+
+	scanf_s("%d", &a);
+
+	for (a_copy = a, count = 0, des = 1; a_copy > 9; count++,a_copy /= 10) {
+		des *= 10;
+	}
+
+	printf("count=%d\ndes=%d\n", count, des);
+
+	for (a_copy=a; count >= 0;) {
+		d = a_copy / des;
+		printf("%d*10^%d ", d, count);
+		a_copy %= des;
+		des /= 10;
+		count --;
+	}
+
+#include<stdio.h>
+
+int main()
+{
+	float E, x,x_n,x_n1;
+	int ind;
+
+	scanf_s("%f", &E);
+
+	for (x = 0, ind = 0; 1>0; ) {
+		x_n1 = x;
+		x_n = (x + 1) / ((2 * x) + 1);
+		ind += 1;
+		if (x_n - x_n1 < E) {
+			printf("%f\n%d", x_n, ind);
+			return 0;
+		}
+		x = x_n;
+	}
+}

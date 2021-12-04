@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int i, res[100][100], n, j,x,m,c;
+
+	scanf_s("%d", &n);
+	scanf_s("%d", &m);
+	scanf_s("%d", &c);
+
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			scanf_s("%d", &res[i][j]);
+		}
+	}
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			printf("%d\t", res[i][j]);
+        }
+		printf("\n");
+	}
+	for (i = 0,j=m-1; i < n; i++) {
+			x = res[i][j];
+			res[i][j] = res[i][c-1];
+			res[i][c-1] = x;
+		}
+	printf("\n");
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			printf("%d\t", res[i][j]);
+		}
+		printf("\n");
+	}
+}

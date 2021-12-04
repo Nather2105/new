@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int i, res[100], n, count, max, ozn, j,max_i;
+
+	scanf_s("%d", &n);
+	srand(time(NULL));
+
+	for (i = 0; i < n; i++) {
+		res[i] = rand() % 30;
+		printf("%d ", res[i]);
+	}
+	for (i = 0, ozn = 0; i < n; i++) {
+		for (j = 0, count = 0; j < n; j++) {
+			if (res[i] == res[j]) count += 1;
+		}
+		if (count == 3) {
+			
+			if (ozn == 0) {
+				ozn = 1;
+				max = res[i];
+				max_i = i;
+			}
+			else {
+				if (res[i] >= max) {
+					max = res[i];
+					max_i = i;
+				}
+			}
+		}
+	}
+	if (ozn) printf("\nmax=%d max_i=%d", max,max_i);
+	else printf("\nno");
+	printf("\n%d", n - 1 - max_i);
+	return 0;
+}

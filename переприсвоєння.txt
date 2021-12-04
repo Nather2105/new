@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int i, res[100], n, x, y,i_r,i_l;
+
+	scanf_s("%d", &n);
+	srand(time(NULL));
+
+	for (i = 0; i < n; i++) {
+		res[i] = rand() % 9 + 2;
+		printf("%d ", res[i]);
+	}
+	printf("\n");
+	for (i_l = 0, i_r = n - 1; i_l < i_r; i_l++, i_r--) {
+		x = res[i_l];
+		res[i_l] = res[i_r];
+		res[i_r] = x;
+	}
+	for (i = 0; i < n; i++) {
+		printf("%d ", res[i]);
+	}
+}
+
+
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int i, res[100], n, x,k,i_r,i_l;
+
+	scanf_s("%d", &n);
+	scanf_s("%d", &k);
+	srand(time(NULL));
+
+	for (i = 0; i < n; i++) {
+		res[i] = rand() % 9 + 2;
+		printf("%d ", res[i]);
+	}
+	printf("\n");
+	for (i_l = 0, i_r = n - 1 - k; i_l < i_r; i_l++, i_r--) {
+		x = res[i_l];
+		res[i_l] = res[i_r];
+		res[i_r] = x;
+	}
+	for (i_l = n-k, i_r = n-1; i_l < i_r; i_l++, i_r--) {
+		x = res[i_l];
+		res[i_l] = res[i_r];
+		res[i_r] = x;
+	}
+	for (i_l = 0, i_r = n-1; i_l < i_r; i_l++, i_r--) {
+		x = res[i_l];
+		res[i_l] = res[i_r];
+		res[i_r] = x;
+	}
+	for (i = 0; i < n; i++) {
+		printf("%d ", res[i]);
+	}
+}

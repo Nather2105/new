@@ -1,0 +1,61 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+{
+    int a,b,c,A,B,C,max;
+    
+    printf("write 3 sides of the triangle:");
+    
+    scanf("%d %d %d",&a,&b,&c);
+    max=a;
+    if (max<b)
+      max=b;
+    else
+      max=max;
+      
+    if (max<c)
+      max=c;
+    else 
+      max=max;
+    if (max==a)
+    {
+       if (pow(a,2)==pow(b,2)+pow(c,2))
+        printf("right triangle");
+    
+      if (pow(a,2)<pow(b,2)+pow(c,2))
+        printf("acute triangle");
+    
+      if (pow(a,2)>pow(b,2)+pow(c,2))
+        printf("obtuse triangle");
+    }
+
+         if (max==b)
+     {
+    
+      if (pow(b,2)==pow(a,2)+pow(c,2))
+        printf("right triangle");
+    
+      if (pow(b,2)<pow(a,2)+pow(c,2))
+        printf("acute triangle");
+    
+      if (pow(b,2)>pow(a,2)+pow(c,2))
+        printf("obtuse triangle");
+     }    
+       if (max==c)
+     {
+    
+      if (pow(c,2)==pow(b,2)+pow(a,2))
+        printf("right triangle");
+    
+      if (pow(c,2)<pow(b,2)+pow(a,2))
+        printf("acute triangle");
+    
+      if (pow(c,2)>pow(b,2)+pow(a,2))
+        printf("obtuse triangle");  
+    }
+}
+    
+    printf("res is %.2f",res);
+    }
+}

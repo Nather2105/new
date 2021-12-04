@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int i, res[100], res1[100], n, x, count, count_1, y, j, l_max, p_t, l_t, p_max;
+
+	scanf_s("%d", &n);
+	srand(time(NULL));
+
+	for (i = 0; i < n; i++) {
+		res[i] = rand() % 5 + 2;
+		printf("%d ", res[i]);
+	}
+	printf("\n");
+	l_max = 0;
+	p_t = 0;
+	l_t = 1;
+
+	for (i = 1; i < n; i++) {
+		if (res[i] > res[i - 1]) l_t++;
+		else {
+			if (l_t > l_max) {
+				l_max = l_t;
+				p_max = p_t;
+			}
+			p_t = i;
+			l_t = 1;
+		}
+	}
+	if (l_t > l_max) {
+		l_max = l_t;
+		p_max = p_t;
+	}
+}

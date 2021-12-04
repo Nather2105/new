@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int i, res[100][100], n, j,sum,dob;
+
+	scanf_s("%d", &n);
+
+	for (i = 0, sum = 0, dob = 1; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			scanf_s("%d", &res[i][j]);
+			sum += res[i][j];
+			dob *= res[i][j];
+		}
+	}
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			printf("%d\t", res[i][j]);
+		}
+		printf("\n");
+	}
+	printf("sum=%d\ndob=%d", sum,dob);
+}

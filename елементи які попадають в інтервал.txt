@@ -1,0 +1,25 @@
+int main()
+{
+	int i, res[100], n, num1, num2,how;
+
+	scanf_s("%d", &n);
+	srand(time(NULL));
+
+	for (i = 0; i < n; i++) {
+		res[i] = rand() % 9 + 2;
+		printf("%d ", res[i]);
+	}
+	printf("write 2 numbers from 2 to 10: ");
+	scanf_s("%d %d", &num1, &num2);
+
+	for (i = 0, how = 0; i < n; i++) {
+		if (res[i] > num1 && res[i] < num2){
+		printf("%d\t", res[i]);
+		how += 1;
+		}
+	}
+	printf("\ni=%d", how);
+	return 0;
+}
+
+

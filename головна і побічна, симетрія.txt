@@ -1,0 +1,44 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int  a[100][100], n;
+	int i, j, i_l, i_r, j_l, j_k, m, j_r;
+
+	printf("n:");
+	scanf_s("%d", &n);
+	srand(time(NULL));
+
+	for (i = 0; i < n; i++) {
+		for (j = 0; j < n; j++) {
+			a[i][j] = rand() % 1000;
+			printf("%3d|", a[i][j]);
+		}
+		printf("\n");
+	}
+
+	for (i = 0; i < n; i++)
+		printf("a[%d][%d]=%3d|", i, i, a[i][i]);
+
+	printf("\n");
+	for (i = 0; i < n; i++)
+		printf("%3d|", a[i][n - 1 - i]);
+
+	printf("\n");
+	for (i_l = 0, i_r = n - 1; i_l < n; i_l++, i_r--)
+		printf("%3d|", a[i_l][i_r]);
+
+	printf("\n");
+
+	for (i = 0; i < n; i++) {
+		for (j_l = 0, j_r = n - 1; j_l < n; j_l++, i_r--) {
+			if (a[i][j_l] != a[i][j_r]) {
+				break;
+			}
+		}
+		if (j_l >= j_r) {
+			printf("%d ", i);
+		}
+	}

@@ -1,0 +1,264 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float x,y,a,res;
+    printf("Inpute 2 numbers:");
+    scanf("%f %f",&x,&y);
+    a=pow(x+y,2);
+    
+    if (y==0){
+      printf("ERROR");
+      return 0;}
+    
+      res=a - x/y + 10;
+      
+    printf("res=%f",res);
+    getch();
+}
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float x,y,a,res;
+    printf("Inpute 3 numbers:");
+    scanf("%f %f %f",&x,&y,&a);
+    
+    
+    if (a==-2){
+      printf("ERROR");
+      return 0;}
+    
+      res=x-y/(a+2);
+      
+    printf("res=%f",res);
+    getch();
+}
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float x,a,res;
+    printf("Inpute 1 number:");
+    scanf("%f",&x);
+    a=pow(x-10,0.5);
+    
+    if (x<10){
+      printf("ERROR");
+      return 0;}
+    
+      res=a/x;
+      
+    printf("res=%.2f",res);
+    getch();
+}
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float a,b,res;
+    printf("Inpute 2 numbers:");
+    scanf("%f %f",&a,&b);
+    
+    
+    if (a==b){
+      printf("ERROR");
+      return 0;}
+    
+    res=(a+b)/(a-b)/a*b;
+     
+    printf("res=%f",res);
+    getch();
+}
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    float a,b,x,res;
+    printf("Inpute 2 numbers:");
+    scanf("%f %f",&a,&b);
+
+    if (b>a){
+      printf("ERROR");
+      return 0;}
+    
+     if (a==-1){
+      printf("ERROR");
+      return 0;} 
+    
+    x=pow(a-b,0.5);      
+      res=(a-b)/x/(a+1);
+      
+    printf("res=%.2f",res);
+
+}
+
+#include <stdio.h>
+#include <math.h>
+
+
+K!!
+int main()
+{
+    int k,i, ozn;
+    float result;
+    
+    for(ozn=1;ozn!=0;) {
+        
+        printf("k = ");
+        scanf("%d",&k);
+        
+        result = 1;
+        for (i=k; i>0; i-=2)
+          result*=i;
+          
+          printf("%d!!= %.0f",k, result);
+          printf("\nПродовжити? 1|0:");
+          scanf("%d", &ozn);
+    }
+     return 0;
+}
+
+#include <stdio.h>
+#include <math.h>
+
+
+K!!
+int main()
+{
+    int k,i, parn;
+    float result;
+    
+    
+        
+        printf("k = ");
+        scanf("%d",&k);
+       
+        parn=k%2;
+         if(parn==0) i=2;
+         else i=1;
+        //i=2-parn; 
+        for (result=1; i<=k; i+=2)
+          if(i%2==parn)
+          result*=i;
+          
+        printf("%d!!=%.0f",k,result);
+         
+     return 0;
+}
+
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a,b,c,d,A,B,C,D,min;
+    
+      printf("напишіть 4 дійсні числа:");
+      scanf("%d %d %d %d",&a,&b,&c,&d);
+      
+      A=abs(a);
+      B=abs(b);
+      C=abs(c);
+      D=abs(d);
+      
+     min=A;
+     
+     if (min>B)
+       min=B;
+       
+     if (min>C)
+       min=C;
+       
+     if (min>D)
+      min=D;
+      
+      printf("|a|=%d,|b|=%d,|c|=%d,|d|=%d\n",A,B,C,D);
+      printf("%d",min);
+          
+     
+     return 0;
+}
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a, b, c,d,e,sum;
+    
+      printf("напишіть трицифрове число:");
+      scanf("%d",&a);
+      
+      b=(a/100);
+      
+      c= a % 100;
+      
+      d=c/10;
+      
+      e=c%10;
+      
+      sum=e+d+b;
+      
+      printf("sum=%d",sum);
+          
+     
+     return 0;
+
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int a, b, c,d,e,dob;
+    
+      printf("напишіть трицифрове число:");
+      scanf("%d",&a);
+      
+      b=(a/100);
+      
+      c= a % 100;
+      
+      d=c/10;
+      
+      e=c%10;
+      
+      dob=e*d*b;
+      
+      printf("dob=%d",dob);
+          
+     
+     return 0;
+
+
+
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+int main()
+{
+    float x,res;
+    
+    printf("write number:");
+    scanf("%f",&x);
+    
+    for(res,x; x>0; x=(x/10)-((int)x%10)/10)
+    
+     res=res +((int)x%10);
+     
+     printf("sum=%.0f\n",res);
+}

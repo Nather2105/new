@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <math.h>
+#include<time.h>
+
+int main()
+{
+	int i, res[100], res1[100], n, x, count, count_1, y, j;
+
+	scanf_s("%d", &n);
+	srand(time(NULL));
+
+	for (i = 0; i < n; i++) {
+		res[i] = rand() % 9 + 2;
+		printf("%d ", res[i]);
+	}
+	printf("\n");
+	for (i = 1, count_1 = 0, count = 1; i < n; i++) {
+		if (res[i] < res[i - 1]) {
+			count = 1;
+		}
+		if (res[i] <= res[i + 1]) {
+			count += 1;
+		}
+		 
+		if (res[i] > res[i + 1] && count > count_1) {
+			count_1 = count;
+			for (j = 0, y = count_1 - 1; j < count_1; j++) {
+				res1[j] = res[i - y];
+				y -= 1;
+
+			}
+			count = 1;
+		}
+	}
+	printf("\n");
+	for (i = 0; i < count_1; i++) {
+		printf("%d ", res1[i]);
+	}
+}
+
+	

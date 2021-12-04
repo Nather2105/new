@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+
+int main()
+{
+    int matr[100][100], rowBeg = 0,n,m,
+        value = 0, i, j,colEnd,rowEnd,colBeg,SIZE;
+
+    scanf_s("%d", &n);
+    scanf_s("%d", &m);
+    SIZE = m * n;
+    colEnd = m - 1;
+    rowEnd = n - 1;
+    colBeg = -1;
+
+
+    while (value < SIZE)
+    {
+        for (i = ++colBeg; i <= colEnd && value < SIZE; i++)
+            matr[rowBeg][i] = ++value;
+        for (i = ++rowBeg; i <= rowEnd && value < SIZE; i++)
+            matr[i][colEnd] = ++value;
+        for (i = --colEnd; i >= colBeg && value < SIZE; i--)
+            matr[rowEnd][i] = ++value;
+        for (i = --rowEnd; i >= rowBeg && value < SIZE; i--)
+            matr[i][colBeg] = ++value;
+    }
+
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < m; j++)
+            printf("%3d", matr[i][j]);
+        puts("");
+    }
+
+    return 0;
+}
