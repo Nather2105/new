@@ -1,0 +1,39 @@
+#include<time.h>
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    int i,j,count,count_c=0,fl=0,k=0,mun=0;
+    char s[100];
+    char s1[100];
+    char sp[]=" .,;:";
+    char *r;
+    srand(time(NULL));
+    fgets(s,100,stdin);
+    r='a'+rand()%32;
+    fprintf(stdout,"%c\n",r);
+
+    for(i=0;i<100;i++){
+        if(s[i]==r) fl=1;
+        if(strchr(sp,s[i])&& fl==0){
+            for(j=count_c;j<i;j++){
+                if (strchr(sp,s[j])){
+                s1[k++]=s[j];
+                }
+                else{
+                    s1[k++]=s[j]-32;
+                }
+            }
+            count_c=i;
+        }
+        if (strchr(sp,s[i])&&fl==1){
+            fl=0;
+            count_c=i;
+            mun++;
+        }
+        
+    }
+    fputs(s1,stdout);
+    printf("\n%d",mun);
+}
