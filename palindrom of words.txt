@@ -1,0 +1,28 @@
+#include<time.h>
+#include<stdio.h>
+#include<string.h>
+
+int main()
+{
+    int i, j, n,count_n=0,count_c=0,fl=0,count=0;
+    char s[100];
+    char sp[] = " .,;:";
+    fgets(s, 100, stdin);
+    n = strlen(s);
+    printf("%d\n", n);
+    for (i = 0; i <= n; i++) {
+        if (strchr(sp,s[i]) || s[i]== '\n') {
+            for (j = count_c, count = 0; j < i - 1 - count; j++, count++) {
+                if (s[j] != s[i - 1 - count]) {
+                    fl=1;
+                }
+            }
+                if (fl == 0) {
+                    for (j = count_c; j <= i; j++) printf("%c", s[j]);
+                }
+                fl = 0;
+           count_c = i + 1;
+        }
+    }
+    return 0;
+}
