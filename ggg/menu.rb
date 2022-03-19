@@ -23,6 +23,10 @@ class Menu
     @sum=0
     @order=order.split(" ")
     @menu.map{ |i| @sum+=i.price if @order.include? i.name }
-    @sum
+    if (@sum == 0)
+      puts "your order is not accepted"
+    else
+      puts "your price of order is #{@sum}"
+    end
   end
 end

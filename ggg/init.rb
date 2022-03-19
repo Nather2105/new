@@ -10,6 +10,7 @@ menu.add_product(product1)
 menu.add_product(product2)
 
 menu.menu_print
+puts "make your order"
 
-p "your price of order is #{menu.price_of_order(STDIN.gets.chomp)}"
+menu.price_of_order(STDIN.gets.chomp)
 
