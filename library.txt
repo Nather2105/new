@@ -1,0 +1,358 @@
+#include <stdio.h>
+#include<time.h>
+#include<stdlib.h>
+
+int try0()
+{
+    int* mas, n, m, * p, i, j;
+
+    srand(time(NULL));
+
+    scanf_s("%d", &n);
+
+    p = &n;
+    mas = malloc(sizeof(int) * *p);
+
+    for (i = 0; i < *p; i++) {
+        *(mas + i) = rand() % 10;
+    }
+
+    for (i = 0; i < *p; i++) {
+        printf("%d ", *(mas + i));
+    }
+
+    free(mas);
+    return 0;
+}
+
+int try1()
+{
+    int  **mas, n, m, *p, i, j, k = 0;
+
+    scanf_s("%d", &n);
+    scanf_s("%d", &m);
+
+    mas = malloc(sizeof(int) * n);
+
+    for (i = 0; i < n; i++) {
+        *(mas + i) = malloc(sizeof(int) * m);
+    }
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            mas[i][j] = k++;
+            printf("%d ", mas[i][j]);
+        }
+        printf("\n");
+    }
+    free(*mas);
+    return 0;
+
+}
+int rec()
+{
+    int i, j, * a, ** b, n = 3;
+
+    a = malloc(sizeof(int) * n);
+
+    for (i = 0; i < 3; i++) {
+        printf("a[%d]=", i + 1);
+        scanf_s("%d", &a[i]);
+    }
+
+
+    b = malloc(sizeof(int) * n);
+
+    for (i = 0; i < 3; i++) {
+        *(b + i) = malloc(sizeof(int) * n);
+    }
+
+
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            b[i][j] = a[i] - (3 * a[j]);
+            printf("%d|", b[i][j]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+int pereriz()
+{
+    int i, *res, *res1, n, m, x, y, j;
+
+    scanf_s("%d", &n);
+    scanf_s("%d", &m);
+    srand(time(NULL));
+
+    res = malloc(sizeof(int) * n);
+    for (i = 0; i < n; i++) {
+        *(res+i) = rand() % 9 + 2;
+        printf("%d ", *(res+i));
+    }
+    printf("\n");
+    res1 = malloc(sizeof(int) * m);
+    for (i = 0; i < m; i++) {
+        *(res1+i) = rand() % 9 + 2;
+        printf("%d ", *(res1+i));
+    }
+    printf("\n");
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            if (*(res+i) == *(res1+j)) {
+                printf("%d\t", *(res+i));
+            }
+        }
+    }
+}
+int pereprusvoennya()
+{
+    int i, *res, n, x, y;
+
+    scanf_s("%d", &n);
+    srand(time(NULL));
+
+    res = malloc(sizeof(int) * n);
+
+    for (i = 0; i < n; i++) {
+        *(res + i) = rand() % 9 + 2;
+        printf("%d ", *(res + i));
+    }
+    printf("\n");
+    x = *res;
+    for (i = n - 1; i >= 0; i--) {
+        y = *(res+i);
+        *(res+i) = x;
+        x = y;
+    }
+    for (i = 0; i < n; i++) {
+        printf("%d ", *(res+i));
+    }
+
+}
+
+int obednannya()
+{
+    int i, *res, *res1, n, m, x, y, j;
+
+    scanf_s("%d", &n);
+    scanf_s("%d", &m);
+    srand(time(NULL));
+
+    res = malloc(sizeof(int) * n);
+    res1 = malloc(sizeof(int) * m);
+
+    for (i = 0; i < n; i++) {
+        *(res + i) = rand() % 9 + 2;
+        printf("%d ", *(res + i));
+    }
+    printf("\n");
+    for (i = 0; i < m; i++) {
+        *(res1 + i) = rand() % 9 + 2;
+        printf("%d ", *(res1 + i));
+    }
+    printf("\n");
+
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < m; j++) {
+            if (*(res + i) == *(res1 + j)) {
+                *(res1 + j) = 0;
+            }
+        }
+    }
+    for (i = 0; i < n; i++) {
+        printf("%d ", res[i]);
+    }
+    for (j = 0; j < m; j++) {
+        if (*(res1 + j) != 0) {
+            printf("%d ", *(res1 + j));
+        }
+
+    }
+}
+int longer_growing_сhain()
+{
+    int i, *res, *res1, n, x, count, count_1, y, j;
+
+    scanf_s("%d", &n);
+    srand(time(NULL));
+    res = malloc(sizeof(int) * n);
+    res1 = malloc(sizeof(int) * n);
+
+    for (i = 0; i < n; i++) {
+        *(res + i) = rand() % 9 + 2;
+        printf("%d ", *(res + i));
+    }
+    printf("\n");
+    for (i = 1, count_1 = 0, count = 1; i < n; i++) {
+        if(*(res + i) < *(res + i - 1)) {
+            count = 1;
+        }
+        if (*(res + i) <= *(res + i + 1)) {
+            count += 1;
+        }
+
+        if (*(res + i) > *(res + i+1) && count > count_1) {
+            count_1 = count;
+            for (j = 0, y = count_1 - 1; j < count_1; j++) {
+                *(res1+j) = *(res+i - y);
+                y -= 1;
+
+            }
+            count = 1;
+        }
+    }
+    printf("\n");
+    for (i = 0; i < count_1; i++) {
+        printf("%d ", *(res1+i));
+    }
+}
+
+int local_max()
+{
+    int i, * res, n;
+
+    scanf_s("%d", &n);
+    srand(time(NULL));
+    res = malloc(sizeof(int) * n);
+
+    for (i = 0; i < n; i++) {
+        *(res + i) = rand() % 9 + 2;
+        printf("%d ", res[i]);
+    }
+    printf("\n");
+
+    for (i = 1; i < n - 1; i++) {
+        if (*(res + i) > *(res + i + 1) && *(res + i) > *(res + i - 1))
+            printf("%d\n", *(res + i));
+
+    }
+    free(res);
+}
+int local_min()
+{
+    int i, * res, n;
+
+    scanf_s("%d", &n);
+    srand(time(NULL));
+    res = malloc(sizeof(int) * n);
+
+    for (i = 0; i < n; i++) {
+        *(res + i) = rand() % 9 + 2;
+        printf("%d ", res[i]);
+    }
+    printf("\n");
+
+    for (i = 1; i < n - 1; i++) {
+        if (*(res + i) < *(res + i + 1) && *(res + i) < *(res + i - 1))
+            printf("%d\n", *(res + i));
+
+    }
+    free(res);
+}
+
+
+int growing_mas()
+{
+    int i, *res, sum, min, min_i, max, count, n;
+
+    scanf_s("%d", &n);
+    srand(time(NULL));
+    res = malloc(sizeof(int) * n);
+    for (i = 0; i < n; i++) {
+        *(res + i) = rand() % 9 + 2;
+        printf("%d ", res[i]);
+    }
+
+    for (i = 0; i < n - 1; i++) {
+        if (*(res + i) >= *(res + i + 1)) {
+            printf("no");
+            return 0;
+        }
+
+    }
+    printf("yes");
+    return 0;
+}
+int falling_mas()
+{
+    int i, * res, sum, min, min_i, max, count, n;
+
+    scanf_s("%d", &n);
+    srand(time(NULL));
+    res = malloc(sizeof(int) * n);
+    for (i = 0; i < n; i++) {
+        *(res + i) = rand() % 9 + 2;
+        printf("%d ", res[i]);
+    }
+
+    for (i = 0; i < n - 1; i++) {
+        if (*(res + i) <= *(res + i + 1)) {
+            printf("no");
+            return 0;
+        }
+
+    }
+    printf("yes");
+    return 0;
+}
+int swap_two_stowp()
+{
+    int i, **res, n, j, x, m, c;
+
+    srand(time(NULL));
+    n = rand() % 5 + 5;
+    scanf_s("%d", &m);
+    scanf_s("%d", &c);
+
+    if (m > n || c > n) {
+        printf("ERROR");
+        return 0;
+    }
+    res = malloc(sizeof(int) * n);
+
+    for (i = 0; i < n; i++) {
+        *(res + i) = malloc(sizeof(int) * n);
+    }
+
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            res[i][j] = rand() % 10;
+        }
+    }
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            printf("%d\t", res[i][j]);
+        }
+        printf("\n");
+    }
+    for (i = 0, j = m - 1; i < n; i++) {
+        x = res[i][j];
+        res[i][j] = res[i][c - 1];
+        res[i][c - 1] = x;
+    }
+    printf("\n");
+    for (i = 0; i < n; i++) {
+        for (j = 0; j < n; j++) {
+            printf("%d\t", res[i][j]);
+        }
+        printf("\n");
+    }
+    free(*res);
+}
+
+int main()
+{
+    swap_two_stowp();
+    falling_mas();
+    growing_mas();
+    local_min();
+    local_max();
+    longer_growing_сhain();
+    obednannya();
+    pereprusvoennya();
+    pereriz();
+    try0();
+    try1();
+    rec();
+
+}   
