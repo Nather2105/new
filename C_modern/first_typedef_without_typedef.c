@@ -4,7 +4,6 @@
 #include<stdlib.h>
 
 
-
 //
 float sin_2(float x);
 
