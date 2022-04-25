@@ -12,7 +12,7 @@ void print_matrix(int**, int);
 //
 void free_memory(int**, int);
 
-int main()
+ int main()
 {
     int** pm;
     int i, j, n;

@@ -69,8 +69,11 @@ void fill_the_mas_of_books(int n, f m)
         
         printf("input last name of author:");
         scanf("%s", m[i].last_name_of_author);
+   //   scanf("%*[^\n]%*c",m[i].last_name_of_author);        
+   //     fflush();
+   //     fgets(m[i].last_name_of_author,30,stdin);
         
-         printf("\nname_of_book:");
+        printf("\nname_of_book:");
         scanf("%s",m[i].name_of_book);
 
         printf("\nyear_of_publication:");
