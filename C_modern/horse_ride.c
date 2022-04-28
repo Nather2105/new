@@ -8,12 +8,15 @@
 int fl = 0;
 
 int flag_matrix[10][10];
-
+    
 //
 struct x_and_y
 {
     int x, y;
 }mas[30];
+
+typedef struct x_and_y *x_y;
+
 //
 void horse_ride(int i, int j, int n, int count);
 
@@ -62,21 +65,21 @@ void horse_ride(int i, int j, int n, int count)
     if(check(i-2, j+1, n)){
         flag_matrix[i-2][j+1] = 1;
         horse_ride(i-2, j+1, n, count+1);
-        if (fl == 1) return;
+        if (fl) return;
         flag_matrix[i-2][j+1] = 0;
     }
  // i-1,j+2
     if(check(i-1, j+2, n)){
         flag_matrix[i-1][j+2] = 1;
         horse_ride(i-1, j+2, n, count+1);
-        if (fl == 1) return;
+        if (fl) return;
         flag_matrix[i-1][j+2] = 0;
     }
  // i+1,j+2
     if(check(i+1, j+2, n)){
         flag_matrix[i+1][j+2] = 1;
         horse_ride(i+1, j+2, n, count+1);
-        if (fl == 1) return;
+        if (fl) return;
         flag_matrix[i+1][j+2] = 0;
     }
  // i+2,j+1
