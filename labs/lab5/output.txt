@@ -1,0 +1,12 @@
+the same book but diff year of publication
+info about book #1
+author = oscar
+name of book = dorian
+year = 1900
+cost = 100
+
+info about book #2
+author = oscar
+name of book = dorian
+year = 1905
+cost = 100
