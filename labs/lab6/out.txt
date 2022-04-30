@@ -1,0 +1,22 @@
+
+info about shop #1
+name of shop = ATB
+name of good = milk
+count of good in a shop = 100
+
+info about shop #2
+name of shop = lidl
+name of good = oat
+count of good in a shop = 105
+
+info about shop #3
+name of shop = ATB
+name of good = oat
+count of good in a shop = 50
+
+info about shop #5
+name of shop = silpo
+name of good = bread
+count of good in a shop = 150
+
+repeats = 3

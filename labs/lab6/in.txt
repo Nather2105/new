@@ -1,0 +1,16 @@
+5
+ATB
+milk
+100
+lidl
+oat
+70
+ATB
+oat
+50
+lidl
+oat
+35
+silpo
+bread
+150
