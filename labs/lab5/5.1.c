@@ -33,23 +33,33 @@ void check_the_same_author_and_name_with_diff_year_of_public(int n, f mas_of_boo
 
 int main()
 {
+    char start[] = {"3\noscar\ndorian\n1900\n100\noscar\ndorian\n1905\n100\noscar\ntom\n1903\n100"}; // 53
     int i, j, n;
     struct book_info *mas_of_books;
-    
-    FILE *input;
+    FILE *input_for_writing;
+    FILE *input_for_reading;
     FILE *output;
 
-     if((input = fopen("input.txt", "r"))==NULL) {
+    
+
+    if((input_for_writing = fopen("input.txt", "w"))==NULL) {
        printf("Cannot open file.");
        return 0;
     }
 
+    fwrite(start, sizeof(char), 64, input_for_writing);
+    fclose(input_for_writing);
+    
+    if((input_for_reading = fopen("input.txt", "r"))==NULL) {
+       printf("Cannot open file.");
+       return 0;
+    }
     if((output = fopen("output.txt", "w"))==NULL) {
        printf("Cannot open file.");
        return 0;
     }
 
-    fscanf(input,"%d",&n);
+    fscanf(input_for_reading,"%d",&n);
  
     printf("Number of books: %d\n", n);
         
@@ -60,12 +70,12 @@ int main()
    
    get_memory_for_struct(&mas_of_books,  n);
     
-   fill_the_mas_of_books(n, mas_of_books, *input); 
+   fill_the_mas_of_books(n, mas_of_books, *input_for_reading); 
    
    check_the_same_author_and_name_with_diff_year_of_public(n, mas_of_books, output);
    
    fclose(output);
-   fclose(input);
+   fclose(input_for_reading);
 
    return 0;
 }

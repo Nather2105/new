@@ -4,11 +4,13 @@
 визначити кількість повторів однакових товарів та їх кількість у відповідних магазинах.
 Використати алгоритм рекурсивного бінарного пошуку.
 */
+//відсортувати за назвою і якщо назва співпадає то +1 повтор
 #include<time.h>
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
 
+int count = 0;
 // f замість struct book_info* (для зручності) 
 typedef struct fantastic (*f);
 
@@ -18,6 +20,7 @@ struct fantastic
    char name_of_shop[30];
    char name_of_goods[30];
    int count;
+   int PIN;
 
 };
 
@@ -34,13 +37,19 @@ void fill_the_mas_of_shops(int n, f shops, FILE input);
 void print_the_info_about_shop(int n, f shops, int i, FILE** output);
 
 //перевірка на умову задачі(щоб співпадав автор і назва книги проте не рік)
-void check_the_same_author_and_name_with_diff_year_of_public(int n, f shops, FILE* output);
+void print_the_infos(int n, f shops, FILE* output);
+
+//
+void sort(int n, f shops, FILE* output, struct fantastic x);
+
+//
+void Bin_Recurs(int L, int R, f s);
 
 int main()
 {
     int i, j, n;
     struct fantastic *shops;
-    
+    struct fantastic x;
     FILE *input;
     FILE *output;
 
@@ -54,16 +63,21 @@ int main()
        return 0;
     }
 
-    fscanf(input,"%d",&n);
+    fscanf(input, "%d", &n);
  
     printf("count of shops: %d\n", n);
    
    get_memory_for_struct(&shops,  n);
     
-   fill_the_mas_of_shops(n, shops, *input); 
+   fill_the_mas_of_shops(n, shops, *input);
+
+   sort(n, shops, output, x);
+
+   print_the_infos(n, shops, output);
    
-   check_the_same_author_and_name_with_diff_year_of_public(n, shops, output);
+   Bin_Recurs(1, n - 1, shops);
    
+   fprintf(output, "\n repeats: %d\n",count);
    fclose(output);
    fclose(input);
 
@@ -86,6 +100,8 @@ void fill_the_mas_of_shops(int n, f m, FILE input)
         fscanf(&input,"%s",m[i].name_of_goods);
 
         fscanf(&input, "%d", &(m[i].count));
+
+        fscanf(&input, "%d", &(m[i].PIN));
     }
 }
 
@@ -94,28 +110,40 @@ void print_the_info_about_shop(int n, f m, int i, FILE** output)
         fprintf(*output, "\ninfo about shop #%d", i+1);
         fprintf(*output, "\nname of shop = %s", m[i].name_of_shop);
         fprintf(*output, "\nname of good = %s", m[i].name_of_goods);
-        fprintf(*output, "\ncount of good in a shop = %d\n", m[i].count);
+        fprintf(*output, "\ncount of good in a shop = %d", m[i].count);
+        fprintf(*output, "\ncode of product = %d\n", m[i].PIN);
 }
 
-void check_the_same_author_and_name_with_diff_year_of_public(int n, f m, FILE* output)
+void print_the_infos(int n, f m, FILE* output)
+{
+    int i, j, count = 0;
+
+    for(i = 0; i < n; i++){
+        print_the_info_about_shop(n, m, i, &output);
+    }
+}
+void sort(int n, f m, FILE* output, struct fantastic x)
 {
     int i, j, count = 0;
 
     for(i = 0; i < n; i++){
         for(j = i + 1;j < n; j++){
-
-            if(strcmp(m[i].name_of_goods, m[j].name_of_goods) == 0){
-                count++;
+            if(m[i].PIN > m[j].PIN){
+                x = m[i];
+                m[i] = m[j];
+                m[j] = x;
             }
-            if(strcmp(m[i].name_of_goods, m[j].name_of_goods) == 0 && strcmp(m[i].name_of_shop, m[j].name_of_shop) == 0){
-                m[i].count += m[j].count;
-                m[j].count = 0;
-                printf("\n%d\n",m[i].count);
-            }
-        }
-        if(m[i].count != 0){
-        print_the_info_about_shop(n, m, i, &output);
         }
     }
-    fprintf(output,"\nrepeats = %d\n",count);
+}
+void Bin_Recurs(int L, int R, f s)
+{
+    int  m;
+    if  (L+1!=R)  // чому ???
+         {
+               m=(L+R)/2;
+               if  (s[m].PIN - s[L].PIN != m - L)  Bin_Recurs(L, m, s);
+               if  (s[R].PIN - s[m].PIN != R - m) Bin_Recurs(m, R, s);
+          }
+    else count++;
 }
