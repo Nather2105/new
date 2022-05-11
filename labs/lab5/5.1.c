@@ -33,7 +33,7 @@ void check_the_same_author_and_name_with_diff_year_of_public(int n, f mas_of_boo
 
 int main()
 {
-    char start[] = {"3\noscar\ndorian\n1900\n100\noscar\ndorian\n1905\n100\noscar\ntom\n1903\n100"}; // 53
+    char start[1000];
     int i, j, n;
     struct book_info *mas_of_books;
     FILE *input_for_writing;
@@ -41,16 +41,23 @@ int main()
     FILE *output;
 
     
-
-    if((input_for_writing = fopen("input.txt", "w"))==NULL) {
+    
+    if((input_for_writing = fopen("input.bin", "wb"))==NULL) {
        printf("Cannot open file.");
        return 0;
     }
+    for(i = 0; i > -1; i++){
+        scanf("%c", &start[i]);
+        if(start[i] == '\n' && start[i-1] == '\n'){
+            break;
+        }
+    }
 
-    fwrite(start, sizeof(char), 64, input_for_writing);
+
+    fwrite(start, sizeof(char), i, input_for_writing);
     fclose(input_for_writing);
     
-    if((input_for_reading = fopen("input.txt", "r"))==NULL) {
+    if((input_for_reading = fopen("input.bin", "rb"))==NULL) {
        printf("Cannot open file.");
        return 0;
     }
