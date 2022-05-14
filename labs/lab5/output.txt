@@ -1,12 +1,12 @@
 the same book but diff year of publication
 info about book #1
-author = tom
-name of book = oscar
-year = 10
-cost = 1
+author = 1
+name of book = 1
+year = 2
+cost = 2
 
 info about book #2
-author = tom
-name of book = oscar
-year = 11
-cost = 1
+author = 1
+name of book = 1
+year = 3
+cost = 3
