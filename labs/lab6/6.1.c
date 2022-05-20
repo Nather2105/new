@@ -14,7 +14,7 @@ int count = 0;
 // f замість struct book_info* (для зручності) 
 typedef struct fantastic (*f);
 
-//структура із інформацією про книгу
+//структура із інформацією про магазин
 struct fantastic
 {
    char name_of_shop[30];
@@ -32,17 +32,16 @@ void get_memory_for_struct(f *m, int n);
 //тому неможливо ввести книжку із назвою яка має більше ніж 1 слово)
 void fill_the_mas_of_shops(int n, f shops, FILE input);
 
-//вивід даних про книгу якщо check_the_same_author_and_name_with_diff_year_of_public спрацьовує 
-//зроблена під вивід даних тільки про одну книгу, тому використовуємо її двічі(на себе та на близьнюка, якщо виконується умова)
+//вивід даних про розпаковку
 void print_the_info_about_shop(int n, f shops, int i, FILE** output);
 
-//перевірка на умову задачі(щоб співпадав автор і назва книги проте не рік)
+// print_the_info_about_shop в циклі
 void print_the_infos(int n, f shops, FILE* output);
 
-//
+// сортування по ПІН
 void sort(int n, f shops, FILE* output, struct fantastic x);
 
-//
+// бінарна рекурсія
 void Bin_Recurs(int L, int R, f s);
 
 int main()
