@@ -1,20 +1,20 @@
 class Movie < Products
-    attr_accessor :year, :director
+    attr_accessor  :director, :name
     
-    def initialize(params)
-        @year = params[:year]
-        @director = params[:director]
-        super
-    end
+    # def initialize(params = {})
+    #     @year = params[:year]
+    #     @director = params[:director]
+    #     @name = params[:name]
+    #     super
+    # end
 
     def to_s
-        puts "name of book is #{name}, director #{director} cost = #{cost}, year of publication \"#{year}\", (#{count}) left"
+        puts "name of book is #{name}, director #{director} cost = #{cost}, (#{count}) left"
     end
 
     def update(params)
-        @year = params[:year] if params[:year]
-        @director = params[:director] if params[:director]
-        super
+        @director = params[:director] 
+        @name = params[:name]
     end
     
 end

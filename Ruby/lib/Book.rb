@@ -1,11 +1,12 @@
 class Book < Products
-    attr_accessor :type, :author
+    attr_accessor  :author, :name
     
-    def initialize(params)
-        @type = params[:type]
-        @author = params[:author]
-        super
-    end
+    # def initialize(params = {})
+    #     @type = params[:type]
+    #     @author = params[:author]
+    #     @name = params[:name]
+    #     super
+    # end
 
     # def self.from_file(file_path)
     #     lines = File.readlines(file_path).map { |l| l.chomp }
@@ -20,12 +21,11 @@ class Book < Products
     #   end
 
     def to_s
-        puts "name of book is #{name}, author #{author} cost = #{cost}, #{type} type of book, #{count} left"
+         puts "name of book is #{name}, author #{author} cost = #{cost}, #{count} left"
     end
 
     def update(params)
-        @type = params[:type] if params[:type]
-        @author = params[:author] if params[:author]
-        super
+        @author = params[:author] 
+        @name = params[:name]
     end
 end

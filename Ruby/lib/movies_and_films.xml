@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<products>
+  <product cost="1000" count="5">
+    <book name="Приключения Тома Сойера" author="Марк Твен"></book>
+  </product>
+
+  <product cost="2000" count="15">
+    <movie name="Великий Лебовскі" director="Марк Леб"></movie>
+  </product>
+
+  <product cost="3000" count="25">
+    <book name="Дивні справи" author="Марк Справ"></book>
+  </product>
+
+  <product cost="4000" count="35">
+    <movie name="вкрадено" director="Марк Вкрад"></movie>
+  </product>
+
+  <product cost="5000" count="45">
+    <book name="Навіщо" author="Марк Наві"></book>
+  </product>
+</products>
