@@ -1,0 +1,204 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif; /*підключення шрифту*/
+    
+    font-size: 15px; /* розмір букв*/
+    line-height: 1.6; /*відступ між рядками*/
+    color: #333; /*колір шрифту*/
+}
+
+/* everything */
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin: 0;
+}
+
+/* container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /*вирівнювання*/
+    color: white;
+}
+
+/* intro */
+.intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    
+    background:
+    url("../imgs/maxresdefault.jpeg") center
+    no-repeat #333;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-blend-mode: multiply;
+}
+
+.intro_inner {
+    width: 100%;
+    min-width: 880px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.intro_title {
+    font-size: 150px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.intro_title:after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #fff;
+    margin: 30px auto;
+}
+
+/* header */
+.header {  
+    padding-top: 20px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+}
+
+.header_inner {
+    display: flex; /* щоб все йшло в одну лінію */
+    justify-content: space-between; /*  відстань між об'єктами всередині */
+    align-items: center; /* вирівнювання по горизонталі-вертикалі */
+}
+
+.header_logo {
+    font-size: 30px;
+    font-weight: 700;
+    Color: #fff;
+    text-decoration: none;
+}
+
+/* nav */
+.nav {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.nav_link {
+    display: inline-block; /* щоб йшли всі в одну лінію */
+    vertical-align: top;
+    margin: 0 15px;
+    position: relative;
+
+    color: #fff;
+    text-decoration: none; /* без полоски знизу  */
+    transition: color .1s linear; /* плавність при наводці  */
+}
+
+.nav_link:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+
+    background-color: #fce38a;
+    opacity: 0; /* плавність при наводці для рисочки знизу  */
+    
+    position: absolute; /* вирівнювання відносно nav_link  */
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    transition: opacity .1s linear;
+}
+.nav_link:hover {
+    color: #fce38a;
+}
+
+.nav_link:hover:after {
+    opacity: 1;
+
+}
+
+/* bottons */
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 15px;
+
+    border: 3px solid #fff;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: -40px;
+
+    
+    transition: background 0.2s linear,
+    color 0.2s linear;
+
+}
+
+.btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+/* footer */
+.footer {
+    justify-content: space-between;
+    background-color: black;
+    color: #fff;
+    margin-top: -15px;
+}
+
+/* hotline */
+.hotline {
+    text-align: center;
+}
+
+.hotline_inside {
+    display: flex; /* щоб все йшло в одну лінію */
+    justify-content: space-between; /*  відстань між об'єктами всередині */
+}
+
+
+/* additionals for hotline */
+.info{
+    margin: 0px 40px;
+    font-size: 10px;
+}
+.url {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 15px;
+
+    border: 3px solid #fff;
+    text-decoration: none;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+.url:hover {
+    background-color: #fff;
+    color: #333;
+}
