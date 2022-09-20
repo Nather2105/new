@@ -59,7 +59,7 @@ int main()
     else // якщо ж два наші об'єкти немають спільного околу, це означає що вони не є з'єднаними, отже, між ними є дистанція
     {
         cout << "ob1 and ob2 dont have a common field." << endl;
-        cout << "distance between ob1 and ob2 is " << distanceTwo(ob1, ob2) << endl;
+        cout << "distance between ob1 and ob2 is" << distanceTwo(ob1, ob2) << endl;
     }
 }
 

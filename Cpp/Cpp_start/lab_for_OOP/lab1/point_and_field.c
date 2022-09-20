@@ -18,7 +18,7 @@ typedef struct point_and_field *ppaf;
 typedef struct point_and_field paf;
 
 //заповнення структури
-void input(ppaf);
+void input(ppaf, int);
 
 //вивід структури
 void output(paf);
@@ -35,8 +35,8 @@ float distanceTwo(paf, paf);
 int main()
 {
     paf ob1, ob2;  //оголошення через тайпдеф
-    input(&ob1); //заповнення об1
-    input(&ob2); //заповнення об2
+    input(&ob1, 1); //заповнення об1
+    input(&ob2, 2); //заповнення об2
 
     //вивід двох об'єктів
     printf("info abount ob1:\n"); 
@@ -59,11 +59,11 @@ int main()
     }
 }
 
-void input(ppaf ob)
+void input(ppaf ob, int i)
 {
-    printf("put a number of ob1:");
+    printf("put a number of ob%d:", i);
     ob->first = check();
-    printf("put a field of number ob1:");
+    printf("put a field of number ob%d:", i);
     ob->second = check();
 }
 

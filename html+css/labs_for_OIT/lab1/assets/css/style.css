@@ -43,6 +43,30 @@ body {
     background-blend-mode: multiply;
 }
 
+.intro_t {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+    
+    background: url("../imgs/young-muscular-caucasian-athlete-training-gym-doing-strength-exercises-practicing-work-his-upper-body-pulling-weights-barbells-fitness-wellness-healthy-lifestyle-concept-working_155003-28949.jpeg")
+    no-repeat #333 center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-blend-mode: multiply;
+}
+
+.intro_t_title {
+    font-size: 60px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.1;
+    margin: 0;
+}
+
 .intro_inner {
     width: 100%;
     min-width: 880px;
@@ -171,6 +195,7 @@ body {
 /* hotline */
 .hotline {
     text-align: center;
+    
 }
 
 .hotline_inside {
@@ -201,4 +226,39 @@ body {
 .url:hover {
     background-color: #fff;
     color: #333;
+}
+
+.trainers {
+    display: flex;
+    justify-content: space-between;
+}
+.trainers_t {
+    margin: 35px 10px;
+    padding-top: 30px;
+    width: 250px;
+    height: 50vh;
+    font-size: 10px;
+    padding-top: 390px;
+    background-color: #fff;
+}
+
+.trainers_t.first {
+    background: url("../imgs/kamal_ahmedov_personalnyj_trener-250x400-129.jpeg") #333;
+}
+.trainers_t.second {
+    
+    background: url("../imgs/trener_lev-250x400-08c.jpeg") center
+    no-repeat ;
+}
+
+.trainers_t.third {
+    
+    background: url("../imgs/trener_mahail-250x400-5bd.jpeg") center
+    no-repeat ;
+}
+
+.trainers_t.fourth {
+    
+    background: url("../imgs/thumbnail_kopylov_pavel-250x400-a9a.jpeg") center
+    no-repeat ;
 }
