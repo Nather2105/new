@@ -1,10 +1,14 @@
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif; /*підключення шрифту*/
-    
-    font-size: 15px; /* розмір букв*/
-    line-height: 1.6; /*відступ між рядками*/
-    color: #333; /*колір шрифту*/
+    font-family: 'Montserrat', sans-serif;
+    /*підключення шрифту*/
+
+    font-size: 15px;
+    /* розмір букв*/
+    line-height: 1.6;
+    /*відступ між рядками*/
+    color: #333;
+    /*колір шрифту*/
 }
 
 /* everything */
@@ -14,15 +18,12 @@ body {
     box-sizing: border-box;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6 {
-    margin: 0;
-}
-
 /* container */
 .container {
     width: 100%;
     max-width: 1200px;
-    margin: 0 auto; /*вирівнювання*/
+    margin: 0 auto;
+    /*вирівнювання*/
     color: white;
 }
 
@@ -33,10 +34,9 @@ body {
     justify-content: center;
     width: 100%;
     height: 100vh;
-    
+
     background:
-    url("../imgs/maxresdefault.jpeg") center
-    no-repeat #333;
+        url("../imgs/maxresdefault.jpeg") center no-repeat #333;
     -webkit-background-size: cover;
     background-size: cover;
     position: relative;
@@ -50,9 +50,66 @@ body {
     width: 100%;
     height: 100vh;
     padding-top: 100px;
-    
-    background: url("../imgs/young-muscular-caucasian-athlete-training-gym-doing-strength-exercises-practicing-work-his-upper-body-pulling-weights-barbells-fitness-wellness-healthy-lifestyle-concept-working_155003-28949.jpeg")
-    no-repeat #333 center;
+
+    background: url("../imgs/young-muscular-caucasian-athlete-training-gym-doing-strength-exercises-practicing-work-his-upper-body-pulling-weights-barbells-fitness-wellness-healthy-lifestyle-concept-working_155003-28949.jpeg") no-repeat #333 center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-blend-mode: multiply;
+}
+
+
+.intro_i {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+
+    background: url("../imgs/strong-man-training-gym_1303-23478.jpeg") no-repeat #333 center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-blend-mode: multiply;
+}
+
+.intro_r {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+
+    background: url("../imgs/istockphoto-1202446746-612x612.jpeg") no-repeat #333 center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-blend-mode: multiply;
+}
+
+.intro_l {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+
+    background: url("../imgs/gym-outside-left-e1508708065414.jpeg") no-repeat #333 center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    position: relative;
+    background-blend-mode: multiply;
+}
+
+.intro_p {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    padding-top: 100px;
+
+    background: url("../imgs/5.jpeg") no-repeat #333 center;
     -webkit-background-size: cover;
     background-size: cover;
     position: relative;
@@ -66,6 +123,12 @@ body {
     line-height: 1.1;
     margin: 0;
 }
+
+.intro_p_title {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 .intro_inner {
     width: 100%;
@@ -91,7 +154,7 @@ body {
 }
 
 /* header */
-.header {  
+.header {
     padding-top: 20px;
     width: 100%;
     position: absolute;
@@ -103,9 +166,12 @@ body {
 }
 
 .header_inner {
-    display: flex; /* щоб все йшло в одну лінію */
-    justify-content: space-between; /*  відстань між об'єктами всередині */
-    align-items: center; /* вирівнювання по горизонталі-вертикалі */
+    display: flex;
+    /* щоб все йшло в одну лінію */
+    justify-content: space-between;
+    /*  відстань між об'єктами всередині */
+    align-items: center;
+    /* вирівнювання по горизонталі-вертикалі */
 }
 
 .header_logo {
@@ -122,14 +188,17 @@ body {
 }
 
 .nav_link {
-    display: inline-block; /* щоб йшли всі в одну лінію */
+    display: inline-block;
+    /* щоб йшли всі в одну лінію */
     vertical-align: top;
     margin: 0 15px;
     position: relative;
 
     color: #fff;
-    text-decoration: none; /* без полоски знизу  */
-    transition: color .1s linear; /* плавність при наводці  */
+    text-decoration: none;
+    /* без полоски знизу  */
+    transition: color .1s linear;
+    /* плавність при наводці  */
 }
 
 .nav_link:after {
@@ -139,15 +208,18 @@ body {
     height: 3px;
 
     background-color: #fce38a;
-    opacity: 0; /* плавність при наводці для рисочки знизу  */
-    
-    position: absolute; /* вирівнювання відносно nav_link  */
+    opacity: 0;
+    /* плавність при наводці для рисочки знизу  */
+
+    position: absolute;
+    /* вирівнювання відносно nav_link  */
     top: 100%;
     left: 0;
     z-index: 1;
 
     transition: opacity .1s linear;
 }
+
 .nav_link:hover {
     color: #fce38a;
 }
@@ -173,13 +245,41 @@ body {
     text-transform: uppercase;
     margin-top: -40px;
 
-    
+
     transition: background 0.2s linear,
-    color 0.2s linear;
+        color 0.2s linear;
 
 }
 
 .btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+.btn_ivts {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 15px;
+
+    border: 3px solid #fff;
+    text-decoration: none;
+
+    background-color: black;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: -58px;
+
+
+    transition: background 0.2s linear,
+        color 0.2s linear;
+
+}
+
+.btn_ivts:hover {
     background-color: #fff;
     color: #333;
 }
@@ -195,20 +295,23 @@ body {
 /* hotline */
 .hotline {
     text-align: center;
-    
+
 }
 
 .hotline_inside {
-    display: flex; /* щоб все йшло в одну лінію */
-    justify-content: space-between; /*  відстань між об'єктами всередині */
+    display: flex;
+    /* щоб все йшло в одну лінію */
+    justify-content: space-between;
+    /*  відстань між об'єктами всередині */
 }
 
 
 /* additionals for hotline */
-.info{
+.info {
     margin: 0px 40px;
     font-size: 10px;
 }
+
 .url {
     display: inline-block;
     vertical-align: top;
@@ -223,6 +326,7 @@ body {
     text-transform: uppercase;
 
 }
+
 .url:hover {
     background-color: #fff;
     color: #333;
@@ -232,6 +336,7 @@ body {
     display: flex;
     justify-content: space-between;
 }
+
 .trainers_t {
     margin: 35px 10px;
     padding-top: 30px;
@@ -245,20 +350,154 @@ body {
 .trainers_t.first {
     background: url("../imgs/kamal_ahmedov_personalnyj_trener-250x400-129.jpeg") #333;
 }
+
 .trainers_t.second {
-    
-    background: url("../imgs/trener_lev-250x400-08c.jpeg") center
-    no-repeat ;
+
+    background: url("../imgs/trener_lev-250x400-08c.jpeg") center no-repeat;
 }
 
 .trainers_t.third {
-    
-    background: url("../imgs/trener_mahail-250x400-5bd.jpeg") center
-    no-repeat ;
+
+    background: url("../imgs/trener_mahail-250x400-5bd.jpeg") center no-repeat;
 }
 
 .trainers_t.fourth {
-    
-    background: url("../imgs/thumbnail_kopylov_pavel-250x400-a9a.jpeg") center
-    no-repeat ;
+
+    background: url("../imgs/thumbnail_kopylov_pavel-250x400-a9a.jpeg") center no-repeat;
+}
+
+
+.ivents {
+    display: flex;
+    justify-content: space-between;
+}
+
+.ivents_t {
+    margin: 35px 10px;
+    width: 300px;
+    height: 50vh;
+    font-size: 10px;
+    padding-top: 500px;
+    /* background-color: #fff; */
+}
+
+.iinfo {
+    width: 300px;
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px 15px;
+
+    border: 3px solid #fff;
+
+    background-color: black;
+
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    margin-top: -500px;
+
+}
+
+.ivents_t.first {
+    background: url("../imgs/2022-09-20\ 15.38.49.jpg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.ivents_t.second {
+
+    background: url("../imgs/pexels-photo-3289711.jpeg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.ivents_t.third {
+
+    background: url("../imgs/moss-house-gym-2.jpeg") center no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+
+}
+
+/* реєстрація */
+.btn__reg_ent {
+    display: inline-block;
+    vertical-align: top;
+    padding: 8px 30px;
+
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0);
+
+    transition: background .2s linear;
+
+    margin-bottom: 25px;
+}
+
+.btn__reg_ent:hover {
+    color: #333;
+    background-color: rgb(255, 255, 255);
+}
+
+.input_reg_ent {
+    font-size: 20px;
+    height: 40px;
+    width: 300px;
+    line-height: 30px;
+    color: white;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0);
+    transition: border-color .2s linear;
+}
+
+.input_reg_ent.first {
+    margin-left: 110px;
+}
+
+.input_reg_ent.second {
+    margin-left: 55px;
+}
+
+.input_reg_ent::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.input_reg_ent:focus {
+    border-color: orangered;
+    outline: none;
+}
+
+.input_reg_ent:focus::placeholder {
+    color: orange;
+}
+
+.poll_text {
+    font-size: 25px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.pad {
+    margin-top: -10px;
+}
+.area_k {
+    height: 225px;
+    resize: none;
+}
+
+.field {
+    width: 300px;
+}
+
+.lower {
+    font-weight: 500;
+    font-size: 22px;
 }
