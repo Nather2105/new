@@ -295,7 +295,7 @@ body {
 /* hotline */
 .hotline {
     text-align: center;
-
+    font-size: 18px;
 }
 
 .hotline_inside {
@@ -309,7 +309,7 @@ body {
 /* additionals for hotline */
 .info {
     margin: 0px 40px;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .url {
@@ -342,7 +342,7 @@ body {
     padding-top: 30px;
     width: 250px;
     height: 50vh;
-    font-size: 10px;
+    font-size: 12px;
     padding-top: 390px;
     background-color: #fff;
 }
