@@ -21,11 +21,11 @@ typedef struct point_and_field paf;
 void input(ppaf, int);
 
 //вивід структури
-void output(paf);
+void output(paf, paf);
 
-float check();
+int check(ppaf);
 
-// виконання умови "Реалізувати метод isDiapazon(ob1,ob2), який перевіряє, 
+// виконання умови "Реалізувати метод isDiapazon(ob1,ob2), який перевіряє,
 // чи попадає одне число з околом в окіл іншого числа з околом"
 int isDiapazon(paf, paf);
 
@@ -34,20 +34,49 @@ float distanceTwo(paf, paf);
 
 int main()
 {
-    paf ob1, ob2;  //оголошення через тайпдеф
+    paf ob1, ob2;   //оголошення через тайпдеф
     input(&ob1, 1); //заповнення об1
     input(&ob2, 2); //заповнення об2
 
     //вивід двох об'єктів
-    printf("info abount ob1:\n"); 
-    output(ob1);
-    printf("info abount ob2:\n");
-    output(ob2);
+    output(ob1, ob2);
 
-    // головна ідея задачі: якщо існує спільна ділянка для двох наших об'єктів, то це означає що 
+}
+
+void input(ppaf ob, int i)
+{
+    while (1)
+    {
+        printf("put a number of ob%d:", i);
+        scanf("%f", &ob->first);
+        printf("put a field of number ob%d:", i);
+        scanf("%f", &ob->second);
+        if (check(ob) == 0)
+        {
+            printf("field must be more than 0\n");
+            continue;
+        }
+        return;
+    }
+}
+
+void output(paf ob1, paf ob2)
+{
+
+    printf("info abount ob1:\n");
+    printf("first = %.2f \nsecond = %.2f\n", ob1.first, ob1.second);
+    printf("lower limit is %.2f\n", ob1.first - ob1.second);
+    printf("higher limit is %.2f\n", ob1.first + ob1.second);
+
+    printf("info abount ob2:\n");
+    printf("first = %.2f \nsecond = %.2f\n", ob2.first, ob2.second);
+    printf("lower limit is %.2f\n", ob2.first - ob2.second);
+    printf("higher limit is %.2f\n", ob2.first + ob2.second);
+
+    // головна ідея задачі: якщо існує спільна ділянка для двох наших об'єктів, то це означає що
     // відстані між нашими полями немає, так як вони пересікаються, або також можна сказати, що вони з'єднані
-    // якщо відповідь до першого методу "так", друга функція не виконується, а точніше, її відповідь = 0 
-    if (isDiapazon(ob1, ob2)) 
+    // якщо відповідь до першого методу "так", друга функція не виконується, а точніше, її відповідь = 0
+    if (isDiapazon(ob1, ob2))
     {
         printf("yeah, ob1 and ob2 have a common field\n");
         printf("distance between them is 0, because they have the common field");
@@ -59,29 +88,13 @@ int main()
     }
 }
 
-void input(ppaf ob, int i)
+int check(ppaf ob)
 {
-    printf("put a number of ob%d:", i);
-    ob->first = check();
-    printf("put a field of number ob%d:", i);
-    ob->second = check();
-}
-
-void output(paf ob)
-{
-    printf("first = %.2f \nsecond = %.2f\n", ob.first, ob.second);
-    printf("lower limit is %.2f\n", ob.first - ob.second);
-    printf("higher limit is %.2f\n", ob.first + ob.second);
-}
-
-float check()
-{
-    float x;
-    if (scanf("%f", &x) != 1){
-        printf("ERROR: wrong type of data");
-        exit(0);
+    if (ob->second <= 0)
+    {
+        return 0;
     }
-    return x;
+    return 1;
 }
 // головна схема завдання: порівнюємо точки і віднімаємо від нижньої межі більшого об'єкту верхню межу меншого
 // якщо відповідь <= 0, то точки мають спільне поле
@@ -135,4 +148,3 @@ float distanceTwo(paf ob1, paf ob2)
     higher_limit_of_lower_ob = lower.first + lower.second;
     return lower_limit_of_higher_ob - higher_limit_of_lower_ob;
 }
-

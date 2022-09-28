@@ -23,10 +23,10 @@ typedef struct point_and_field paf;
 void input(ppaf, int);
 
 //вивід структури
-void output(paf);
+void output(paf, paf);
 
 //перевірка на ввід
-float check();
+int check(ppaf);
 
 // виконання умови "Реалізувати метод isDiapazon(ob1,ob2), який перевіряє,
 // чи попадає одне число з околом в окіл іншого числа з околом"
@@ -43,10 +43,38 @@ int main()
     input(&ob2, 2); //заповнення об2
 
     //вивід двох об'єктів
+    output(ob1, ob2);
+}
+
+void input(ppaf ob, int i)
+{
+     while (1)
+    {
+        cout << "put a number of ob" << i <<":" << endl;
+        cin >> ob->first;
+        cout << "put a field of number ob"<< i << ":" << endl;
+        cin >> ob->second;
+        if (check(ob) == 0)
+        {
+            printf("field must be more than 0\n");
+            continue;
+        }
+        return;
+    } 
+    
+}
+
+void output(paf ob1, paf ob2)
+{
     cout << "info abount ob1:" << endl;
-    output(ob1);
+    cout << "first = " << ob1.first << "\nsecond = " << ob1.second << endl;
+    cout << "lower limit is " << ob1.first - ob1.second << endl;
+    cout << "higher limit is " << ob1.first + ob1.second << endl;
+
     cout << "info abount ob2:" << endl;
-    output(ob2);
+    cout << "first = " << ob2.first << "\nsecond = " << ob2.second << endl;
+    cout << "lower limit is " << ob2.first - ob2.second << endl;
+    cout << "higher limit is " << ob2.first + ob2.second << endl;
 
     // головна ідея задачі: якщо існує спільна ділянка для двох наших об'єктів, то це означає що
     // відстані між нашими полями немає, так як вони пересікаються, або також можна сказати, що вони з'єднані
@@ -63,31 +91,13 @@ int main()
     }
 }
 
-void input(ppaf ob, int i)
+int check(ppaf ob)
 {
-    cout << "put a number of ob" << i <<":" << endl;
-    ob->first = check();
-    cout << "put a field of number ob"<< i << ":" << endl;
-    ob->second = check();
-    
-}
-
-void output(paf ob)
-{
-    cout << "first = " << ob.first << "\nsecond = " << ob.second << endl;
-    cout << "lower limit is " << ob.first - ob.second << endl;
-    cout << "higher limit is " << ob.first + ob.second << endl;
-}
-
-float check()
-{
-    float x;
-    if(scanf("%f", &x) != 1){
-        cout << "ERROR: wrong type of data" << endl;
-        exit(0);
-        
+    if (ob->second <= 0)
+    {
+        return 0;
     }
-    return x;
+    return 1;
 }
 
 // головна схема завдання: порівнюємо точки і віднімаємо від нижньої межі більшого об'єкту верхню межу меншого
