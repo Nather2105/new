@@ -11,6 +11,8 @@ using namespace std;
 struct point_and_field
 {
     float first, second;
+    void input(int);
+    int check();
 };
 
 // тайпдеф для зручності(вказівник на структуру)
@@ -20,13 +22,12 @@ typedef struct point_and_field *ppaf;
 typedef struct point_and_field paf;
 
 //заповнення структури
-void input(ppaf, int);
 
 //вивід структури
 void output(paf, paf);
 
 //перевірка на ввід
-int check(ppaf);
+
 
 // виконання умови "Реалізувати метод isDiapazon(ob1,ob2), який перевіряє,
 // чи попадає одне число з околом в окіл іншого числа з околом"
@@ -39,22 +40,22 @@ int main()
 {
     paf ob1, ob2; //оголошення через тайпдеф
 
-    input(&ob1, 1); //заповнення об1
-    input(&ob2, 2); //заповнення об2
+    ob1.input(1); //заповнення об1
+    ob2.input(2); //заповнення об2
 
     //вивід двох об'єктів
     output(ob1, ob2);
 }
 
-void input(ppaf ob, int i)
+void point_and_field::input(int i)
 {
      while (1)
     {
         cout << "put a number of ob" << i <<":" << endl;
-        cin >> ob->first;
+        cin >> first;
         cout << "put a field of number ob"<< i << ":" << endl;
-        cin >> ob->second;
-        if (check(ob) == 0)
+        cin >> second;
+        if (check() == 0)
         {
             printf("field must be more than 0\n");
             continue;
@@ -91,9 +92,9 @@ void output(paf ob1, paf ob2)
     }
 }
 
-int check(ppaf ob)
+int point_and_field::check()
 {
-    if (ob->second <= 0)
+    if (second <= 0)
     {
         return 0;
     }
