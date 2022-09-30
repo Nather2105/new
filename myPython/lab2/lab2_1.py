@@ -12,7 +12,7 @@ k = 0
 while sum < e :
     k += 1
     top = math.sin(x**k)
-    fack = fack * (2*k) * (2*k-1)
+    fact = fack * (2*k) * (2*k-1)
     bot = (a**(2*k)*fact)
     sum+= top/bot
 
