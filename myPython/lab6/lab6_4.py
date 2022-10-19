@@ -31,9 +31,14 @@ str1+=str(operation)
 while(1):
     try:
       second = float(input("input second number: "))
+      if second == 0:
+        raise ZeroDivisionError
         
     except ValueError:
       print('put a number, not string')  
+      continue
+    except ZeroDivisionError:
+      print('imposible to div on zero')
       continue
     
     break
@@ -41,4 +46,8 @@ while(1):
 str1+=str(second)
 
 print(eval(str1))
+    
+
+    
+    
     

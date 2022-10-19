@@ -12,9 +12,9 @@ k = 0
 while sum < e :
     k += 1
     top = math.sin(x**k)
-    fact = fack * (2*k) * (2*k-1)
+    fact = fact * (2*k) * (2*k-1)
     bot = (a**(2*k)*fact)
     sum+= top/bot
 
-print('sum =' + str(sum))
+print('sum = ' + str(sum))
 print('count = ' + str(k))

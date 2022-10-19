@@ -1,9 +1,6 @@
 
 n = int(input("input N: "))
 
-# def compare_by_second(point):
-#     return point[1]
-
 teams = {}
 for i in range(n):
     name = input('the name of team #' + str(i+1) + ': ')
