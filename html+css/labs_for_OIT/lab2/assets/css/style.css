@@ -51,7 +51,7 @@ body {
     height: 100vh;
     padding-top: 100px;
 
-    background: url("../1.jpeg") no-repeat #333 center;
+    background: url("../imgs/1.jpeg") no-repeat #333 center;
     -webkit-background-size: cover;
     background-size: cover;
     position: relative;

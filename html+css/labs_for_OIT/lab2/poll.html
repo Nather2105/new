@@ -4,161 +4,150 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/style.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Montserrat:wght@400;700&display=swap"
         rel="stylesheet">
     <title>NetherGym</title>
 </head>
 
 <body>
-    <section>
-        <header class="header">
-            <div class="container">
-                <div class="header_inner">
-                    <a class="header_logo" href="index.html">
-                        NetherGym
-                    </a>
+    <header class="header">
+        <div class="container">
+            <div class="header_inner">
+                <a class="header_logo" href="index.html">
+                    NetherGym
+                </a>
 
-                    <nav class="nav">
-                        <a class="nav_link" href="index.html">Головна</a>
-                        <a class="nav_link" href="trainers.html">Тренери</a>
-                        <a class="nav_link" href="ivents.html">Івенти</a>
-                        <a class="nav_link" href="login.html">Вхід</a>
-                        <a class="nav_link" href="register.html">Реєстрація</a>
-                    </nav>
-                </div>
+                <nav class="nav">
+                    <a class="nav_link" href="index.html">Головна</a>
+                    <a class="nav_link" href="trainers.html">Тренери</a>
+                    <a class="nav_link" href="ivents.html">Івенти</a>
+                    <a class="nav_link" href="login.html">Вхід</a>
+                    <a class="nav_link" href="register.html">Реєстрація</a>
+                </nav>
             </div>
-        </header>
-    </section>
+        </div>
+    </header>
 
-    <section>
-        <div class="intro_p">
-            <div class="container">
-                <div class="intro_inner">
-                    <h1 class="intro_t_title">Тестування</h1>
-                    <form>
-                        <div class="intro_p_title">
-                            <div class="poll_text">
-                                <fieldset class="field">
-                                    <legend> Ініціали</legend>
-                                     <input class="input_reg_ent" type="text" placeholder="Ім'я" required>
-                                    <br><br>
-                                    <input class="input_reg_ent" type="text" placeholder="Фамілія"
-                                        required>
-                                    <br><br>
-                                    <input class="input_reg_ent" type="text" placeholder="По-батькові"
-                                        required>
-                                </fieldset>
+    <div class="intro_p">
+        <div class="container">
+            <div class="intro_inner">
+                <h1 class="intro_t_title">Тестування</h1>
+                <form>
+                    <div class="intro_p_title">
+                        <div class="poll_text">
+                            <fieldset class="field">
+                                <legend> Ініціали</legend>
+                                <input class="input_reg_ent" type="text" placeholder="Ім'я" required>
+                                <br><br>
+                                <input class="input_reg_ent" type="text" placeholder="Фамілія" required>
+                                <br><br>
+                                <input class="input_reg_ent" type="text" placeholder="По-батькові" required>
+                            </fieldset>
 
-                                <p> Вкажіть стать: </p>
-                                <input class="input_reg_ent" type="text" list="gender" required />
-                                <datalist id="gender">
-                                    <option value="чоловіча"></option>
-                                    <option value="жіноча"></option>
-                                </datalist>
-                                <br>
-                                <p> Ваш вік: <br>
-                                    <input class="input_reg_ent" type="number" min="10" max="100" required />
-                                </p>
-                            </div>
-
-                            <div class="poll_text">
-                                Досвід: 
-                                <div class="lower">
-                                    <input type="radio" id="1" name="exp" required>
-                                    Новачок
-                                    <br>
-                                    <input type="radio" id="2" name="exp" required>
-                                    Менше року
-                                    <br>
-                                    <input type="radio" id="3" name="exp" required>
-                                    Від року до двох
-                                    <br>
-                                    <input type="radio" id="4" name="exp" required>
-                                    Від двох до чотирьох
-                                    <br>
-                                    <input type="radio" id="5" name="exp" required>
-                                    Більше п'яти років
-                                </div>
-                                <br>
-                                Рід занять в залі:
-                                <div class="lower">
-                                    <label>
-                                        <input type="checkbox" id="6" name="activities">
-                                        Бодібілдінг
-                                        <br>
-                                        <input type="checkbox" id="7" name="activities">
-                                        Пауерліфтінг
-                                        <br>
-                                        <input type="checkbox" id="8" name="activities">
-                                        Кросфіт
-                                        <br>
-                                        <input type="checkbox" id="9" name="activities">
-                                        Стретчінг
-                                        <br>
-                                    </label>
-                                </div>
-                            </div>
-                            <div class="poll_text">
-                                Скількох людей ви <br>привели в спортзал:
-                                <div class="lower">
-                                    <label>
-                                        <input type="radio" id="10" name="count" required />
-                                        0
-                                        <br>
-                                        <input type="radio" id="11" name="count" required />
-                                        1-3
-                                        <br>
-                                        <input type="radio" id="12" name="count" required />
-                                        4-7
-                                        <br>
-                                        <input type="radio" id="13" name="count" required />
-                                        7 і більше
-                                        <br>
-                                    </label>
-                                </div>
-                                <p>
-                                    Ваші замітки:
-                                    <br>
-                                    <textarea class="input_reg_ent area_k">
-                                    </textarea>
-                                </p>
-                            </div>
+                            <p> Вкажіть стать: </p>
+                            <input class="input_reg_ent" type="text" list="gender" required />
+                            <datalist id="gender">
+                                <option value="чоловіча"></option>
+                                <option value="жіноча"></option>
+                            </datalist>
+                            <br>
+                            <p> Ваш вік: <br>
+                                <input class="input_reg_ent" type="number" min="10" max="100" required />
+                            </p>
                         </div>
 
-                        <input class="btn__reg_ent pad" type="reset" value="Скинути">
-                        <input class="btn__reg_ent pad" type="submit" value="Підтвердити">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <div class="hotline">
-            <h1>Гаряча Лінія</h1>
-            <div class="hotline_inside">
-                <div class="info">
-                    <h1>Номери телефону:</h1>
-                    <h1> +380991776801 </h1>
-                    <h1> +380678875589 </h1>
-                </div>
-                <div class="info">
-                    <h1> email: </h1>
-                    <h1> qwftg2004@gmail.com </h1> 
-                    <a class="url" href="https://goo.gl/maps/6oPHqc26MfZ3KvqB8">Ми на картах Google</a>
-                </div>
-                <div class="info">
-                    <h1>Адреса:</h1>
-                    <h1>Чернівецька область</h1>
-                    <h1>смт.Глибока</h1>
-                    <h1>Привокзальна 8/1</h1>
-                </div>
-            </div>
-        </div>
+                        <div class="poll_text">
+                            Досвід:
+                            <div class="lower">
+                                <input type="radio" id="1" name="exp" required>
+                                Новачок
+                                <br>
+                                <input type="radio" id="2" name="exp" required>
+                                Менше року
+                                <br>
+                                <input type="radio" id="3" name="exp" required>
+                                Від року до двох
+                                <br>
+                                <input type="radio" id="4" name="exp" required>
+                                Від двох до чотирьох
+                                <br>
+                                <input type="radio" id="5" name="exp" required>
+                                Більше п'яти років
+                            </div>
+                            <br>
+                            Рід занять в залі:
+                            <div class="lower">
+                                <label>
+                                    <input type="checkbox" id="6" name="activities">
+                                    Бодібілдінг
+                                    <br>
+                                    <input type="checkbox" id="7" name="activities">
+                                    Пауерліфтінг
+                                    <br>
+                                    <input type="checkbox" id="8" name="activities">
+                                    Кросфіт
+                                    <br>
+                                    <input type="checkbox" id="9" name="activities">
+                                    Стретчінг
+                                    <br>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="poll_text">
+                            Скількох людей ви <br>привели в спортзал:
+                            <div class="lower">
+                                <label>
+                                    <input type="radio" id="10" name="count" required />
+                                    0
+                                    <br>
+                                    <input type="radio" id="11" name="count" required />
+                                    1-3
+                                    <br>
+                                    <input type="radio" id="12" name="count" required />
+                                    4-7
+                                    <br>
+                                    <input type="radio" id="13" name="count" required />
+                                    7 і більше
+                                    <br>
+                                </label>
+                            </div>
+                            <p>
+                                Ваші замітки:
+                                <br>
+                                <textarea class="input_reg_ent area_k">
+                                    </textarea>
+                            </p>
+                        </div>
+                    </div>
 
+                    <input class="btn__reg_ent pad" type="reset" value="Скинути">
+                    <input class="btn__reg_ent pad" type="submit" value="Підтвердити">
+                </form>
+            </div>
+        </div>
+    </div>
+
+    
+    <footer class="footer hotline">
+        <h1>Гаряча Лінія</h1>
+        <div class="hotline_inside">
+            <div class="info">
+                <h1>Номери телефону:</h1>
+                <h1> +380991776801 </h1>
+                <h1> +380678875589 </h1>
+            </div>
+            <div class="info">
+                <h1> email: </h1>
+                <h1> qwftg2004@gmail.com </h1>
+                <a class="url" href="https://goo.gl/maps/6oPHqc26MfZ3KvqB8">Ми на картах Google</a>
+            </div>
+            <div class="info">
+                <h1>Адреса:</h1>
+                <h1>Чернівецька область</h1>
+                <h1>смт.Глибока</h1>
+                <h1>Привокзальна 8/1</h1>
+            </div>
+        </div>
     </footer>
 
 
