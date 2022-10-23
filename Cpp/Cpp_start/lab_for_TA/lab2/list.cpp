@@ -1,112 +1,53 @@
 // Варіант №15
 
-// Розробити програму, яка створює односпрямований список , 
-// елементами якого є дійсні числа. У заданому списку  поміняти місцями сусідні елементи. 
-// Передбачити перегляд списку тільки один раз.
+// Розробити програму, яка створює односпрямований список , елементами якого є дійсні числа.
+//  У заданому списку  поміняти місцями сусідні елементи. Передбачити перегляд списку тільки один раз.
+#include <stdio.h>
 
-#include <iostream>
-using namespace std;
- 
-struct Node {
-    int val;
-    Node* next;
- 
-    Node(int _val) : val(_val), next(nullptr) {}
-};
- 
-struct list {
-    Node* first;
-    Node* last;
- 
-    list() : first(nullptr), last(nullptr) {}
- 
-    bool is_empty() {
-        return first == nullptr;
+#include <stdlib.h>
+int main()
+{
+    struct list
+    {
+        int data;
+        struct list *next;
+    };
+    int n, i;
+    printf("Input N: ");
+    scanf("%d", &n);
+    struct list *plist, *head;
+    plist = (struct list*)malloc(sizeof(struct list));
+    head = plist; // створення списка
+    i = 1;
+    do
+    {
+        scanf("%d", &plist->data);
+        plist->next = (struct list*)malloc(sizeof(struct list));
+        plist = plist->next;
+    } while (++i < n);
+    scanf("%d", &plist->data);
+    plist->next = 0;
+    plist = head; // Виведення елементів списку
+    while (plist != 0)
+    {
+        printf("%d ", plist->data);
+        plist = plist->next;
     }
- 
-    void push_back(int _val) {
-        Node* p = new Node(_val);
-        if (is_empty()) {
-            first = p;
-            last = p;
-            return;
-        }
-        last->next = p;
-        last = p;
+    plist = head;
+    i = 0;
+    int swap;
+    while(i < n-1){
+        swap = plist->data; 
+        plist->data = plist->next->data;
+        plist->next->data = swap;
+        plist = plist->next->next;
+        i+=2;
     }
- 
-    void print() {
-        if (is_empty()) return;
-        Node* p = first;
-        while (p) {
-            cout << p->val << " ";
-            p = p->next;
-        }
-        cout << endl;
+    plist = head;
+    printf("\n");
+    while (plist != 0)
+    {
+        printf("%d ", plist->data);
+        plist = plist->next;
     }
- 
-    Node* find(int _val) {
-        Node* p = first;
-        while (p && p->val != _val) p = p->next;
-        return (p && p->val == _val) ? p : nullptr;
-    }
- 
-    void remove_first() {
-        if (is_empty()) return;
-        Node* p = first;
-        first = p->next;
-        delete p;
-    }
- 
-    void remove_last() {
-        if (is_empty()) return;
-        if (first == last) {
-            remove_first();
-            return;
-        }
-        Node* p = first;
-        while (p->next != last) p = p->next;
-        p->next = nullptr;
-        delete last;
-        last = p;
-    }
- 
-    void remove(int _val) {
-        if (is_empty()) return;
-        if (first->val == _val) {
-            remove_first();
-            return;
-        }
-        else if (last->val == _val) {
-            remove_last();
-            return;
-        }
-        Node* slow = first;
-        Node* fast = first->next;
-        while (fast && fast->val != _val) {
-            fast = fast->next;
-            slow = slow->next;
-        }
-        if (!fast) {
-            cout << "This element does not exist" << endl;
-            return;
-        }
-        slow->next = fast->next;
-        delete fast;
-    }
- 
-    Node* operator[] (const int index) {
-        if (is_empty()) return nullptr;
-        Node* p = first;
-        for (int i = 0; i < index; i++) {
-            p = p->next;
-            if (!p) return nullptr;
-        }
-        return p;
-    }
-};
- 
-int main() {
-	list l;
-	return 0;
 }
