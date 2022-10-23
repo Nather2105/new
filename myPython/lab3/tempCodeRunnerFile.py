@@ -1,15 +1,13 @@
 from random import randint
 
-a = []
-count = 0
-for i in range(0,10):
-    a.append(randint(-15,15))
+a = tuple([randint(0, 5) for i in range(10)] )
+b = tuple([randint(-5, 0) for i in range(10)] )
 
-print(str(a))
+print(a)
+print(b)
 
-for i in range (10):
-    
-    if a[i] <= 0:
-        count += 1
+c = a + b
 
-print("count is " + str(count))
+count = c.count(0)
+print('count is ' + str(count))
+print(c)

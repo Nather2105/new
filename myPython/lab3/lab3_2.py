@@ -16,5 +16,9 @@ for i in range(1, n+1):
     else:
         odd_max.append(start[i - 1])
 
-print('max from odds is ', (max(odd_max)))
-print('min from evens is ', (min(even_min)))
+
+ma = max(odd_max)
+mi = min(even_min)
+print('max from odds is ', ma)
+print('min from evens is ', mi)
+print('sum is ', (ma+mi))
