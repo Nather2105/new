@@ -47,11 +47,6 @@ void PrintTree(Tree *t, int h)
     }
     return;
 }
-void PrintTree(Tree *t, Tree *even, Tree *odd)
-{
-    for 
-    
-}
 // Основна програма
 int main()
 {
@@ -62,26 +57,37 @@ int main()
     Tree *root = tree_balance(n);
     Tree *even, *odd;
     PrintTree(root, 0);
+    // if (root->left->left == NULL){
+        cout << root->data;    
+    
     cout << "\n";
-    // system("PAUSE");
-    int i = 0, fl = 0;
-
-    while(i < n){
-        if(root->data % 2 == 0){
-            fl = func(&even, root->data, fl);
-        }
-    }
-    return 0;
+    // if (root->left->rigth == NULL){
+    cout << root->data;
+    
 }
 
-int func(Tree* even, int data){
-        even->left = new Tree;
-        even->left->data = data;
-        if(fl == 1){
-            even->rigth = data;
+// int func(Tree* root)
+// {
+//     if (t != 0)
+//     {
+//         PrintTree(t->left, h + 1);
+//         for (int i = 1; i <= h; i++)
+//             cout << "  ";
+//         cout << t->data << "\n";
+//         cout << "\n";
+//         PrintTree(t->rigth, h + 1);
+//     }
+//     return;
+// }
+
+// int func(Tree* even, int data){
+//         even->left = new Tree;
+//         even->left->data = data;
+//         if(fl == 1){
+//             even->rigth = data;
             
-        }
-}
+//         }
+// }
 // // Дерево пошуку
 // #include <stdlib.h>
 // #include <stdio.h>

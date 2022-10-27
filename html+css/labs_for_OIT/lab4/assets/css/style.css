@@ -361,7 +361,7 @@ body {
   font-size: 14px;
 
 }
-.trainers_t.first {
+/* .trainers_t.first {
     background: url("../imgs/kamal_ahmedov_personalnyj_trener-250x400-129.jpeg") center no-repeat;
 }
 
@@ -378,7 +378,7 @@ body {
 .trainers_t.fourth {
 
     background: url("../imgs/thumbnail_kopylov_pavel-250x400-a9a.jpeg") center no-repeat;
-}
+} */
 
 
 .ivents {
@@ -544,6 +544,12 @@ body {
     .intro_title {
       font-size: 80px;
     }
+    /* .trainers {
+      display: inline-block;
+    } */
+    /* .intro_t {
+      height: 200vh;
+    } */
   }
   @media screen and (max-width: 540px) {
     .intro_title {

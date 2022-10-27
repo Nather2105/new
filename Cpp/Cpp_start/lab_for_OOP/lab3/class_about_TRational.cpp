@@ -7,7 +7,7 @@
 // ділення div(), (a, b) / (c, d);
 // порівняння equ(), bigger(), smaller().
 // Повинна бути реалізована приватна функція скорочення дробу reduce(), яка обов’язково викликається при виконанні арифметичних операцій.
-// тип даних задається класом. Член-даних класу – одна приватна змінна структурного типу, який описаний у п.1, 
+// тип даних задається класом. Член-даних класу – одна приватна змінна структурного типу, який описаний у п.1,
 // члени-функції класу – відкриті неоператорні функції init(), input(), output(), toPChar() і функції доступу до
 // приватної змінної setStruct(), getStruct() або до окремих полів  приватної змінної setVar(), getVar().
 // Функції, зазначені в конкретному варіанті, визначити як звичайні сторонні функції (доступ для до приватної
@@ -19,62 +19,24 @@ using namespace std;
 
 // typedef struct rational rat;
 // typedef struct rational *pr;
-
+struct rational
+{
+    int top, bot;
+};
 class TRational
 {
-    private:
-        struct rational
-        {
-            int top, bot;
-        }drib;
-
-    public:
-        void init(int t, int b)
-        {
-            drib.top = t;
-            drib.bot = b;
-        }
-        void input()
-        {
-            int t, b;
-
-            cout << "input top for number" << endl;
-            cin >> t;
-            cout << "input bot for number" << endl;
-            cin >> b;
-
-            init(t, b);
-        }
-        char* toPChar()
-        {
-            char *str = (char*)malloc(10);
-            sprintf(str, "%d\n--\n%d", drib.top, drib.bot);
-            return str;
-        }
-        void output()
-        {
-            printf("%s\n", toPChar());
-        }
-        rational getStruct()
-        {
-            return drib;
-        }
-        void setTop(int a)
-        {
-            drib.top = a;
-        }
-        int getTop()
-        {
-            return drib.top;
-        }
-        void setBot(int a)
-        {
-            drib.bot = a;
-        }
-        int getBot()
-        {
-            return drib.bot;
-        }
+private:
+    rational drib;
+public:
+    void input(int t, int b);
+    void init();
+    char *toPChar();
+    void output();
+    rational getStruct();
+    void setTop(int a);
+    int getTop();
+    void setBot(int a);
+    int getBot();
 };
 
 //додавання двох дробів
@@ -90,7 +52,7 @@ void mul(TRational, TRational);
 void div(TRational, TRational);
 
 //скорочення
-void reduce(TRational*);
+void reduce(TRational *);
 
 //чи перший елемент дорівнює другому
 void equ(TRational, TRational);
@@ -107,56 +69,65 @@ int main()
     TRational a, b;
     char check = 's';
 
-    a.input();
-    b.input();
+    a.init();
+    b.init();
 
-    while(check != 'x'){ //меню
-        printf("a + b  - type 1\n");
-        printf("a - b - type 2\n");
-        printf("a * b - type 3\n");
-        printf("a / b - type 4\n");
-        printf("a eql b? - type 5\n");
-        printf("a > b? - type 6\n");
-        printf("a < b? - type 7\n");
-        printf("to print a - type 8\n");
-        printf("to print b - type 9\n");
-        scanf("%c", &check);
-        if(check =='1'){
+    while (check != 'x')
+    { //меню
+        cout << "a + b  - type 1\n";
+        cout << "a - b - type 2\n";
+        cout << "a * b - type 3\n";
+        cout << "a / b - type 4\n";
+        cout << "a eql b? - type 5\n";
+        cout << "a > b? - type 6\n";
+        cout << "a < b? - type 7\n";
+        cout << "to print a - type 8\n";
+        cout << "to print b - type 9\n";
+        cin >> check;
+        if (check == '1')
+        {
             add(a, b);
         }
-        else if(check =='2'){
+        else if (check == '2')
+        {
             sub(a, b);
         }
-        else if(check =='3'){
+        else if (check == '3')
+        {
             mul(a, b);
         }
-        else if(check =='4'){
+        else if (check == '4')
+        {
             div(a, b);
         }
-        else if(check =='5'){
+        else if (check == '5')
+        {
             equ(a, b);
         }
-        else if(check =='6'){
+        else if (check == '6')
+        {
             bigger(a, b);
         }
-        else if(check =='7'){
+        else if (check == '7')
+        {
             smaller(a, b);
         }
-        else if(check =='8'){
+        else if (check == '8')
+        {
             a.output();
         }
-        else if(check =='9'){
+        else if (check == '9')
+        {
             b.output();
         }
     }
 }
 
-
-void reduce(TRational* c)
+void reduce(TRational *c)
 {
     int min, i, ctop;
     ctop = abs(c->getTop());
-    
+
     if (c->getStruct().bot > ctop)
     {
         min = ctop;
@@ -241,27 +212,27 @@ void equ(TRational a, TRational b)
 {
     if (a.getBot() == b.getBot() && a.getTop() == b.getTop())
     {
-        printf("yeah\n");
+        cout << "yeah\n";
         return;
     }
     else
     {
-        printf("nope\n");
+        cout << "nope\n";
         return;
     }
 }
 
-void bigger(TRational a,TRational b)
+void bigger(TRational a, TRational b)
 {
     TRational c = sub(a, b);
     if (c.getTop() < 0)
     {
-        printf("nope\n");
+        cout << "nope\n";
         return;
     }
     else
     {
-        printf("yeah\n");
+        cout << "yeah\n";
         return;
     }
 }
@@ -271,12 +242,58 @@ void smaller(TRational a, TRational b)
     TRational c = sub(a, b);
     if (c.getTop() < 0)
     {
-        printf("yeah\n");
+        cout << "yeah\n";
         return;
     }
     else
     {
-        printf("nope\n");
+        cout << "nope\n";
         return;
     }
+}
+void TRational::input(int t, int b)
+{
+    drib.top = t;
+    drib.bot = b;
+}
+void TRational::init()
+{
+    int t, b;
+
+    cout << "input top for number" << endl;
+    cin >> t;
+    cout << "input bot for number" << endl;
+    cin >> b;
+
+    input(t, b);
+}
+char *TRational::toPChar()
+{
+    char *str = (char *)malloc(10);
+    sprintf(str, "%d\n--\n%d\n", drib.top, drib.bot);
+    return str;
+}
+void TRational::output()
+{
+    cout << toPChar();
+}
+rational TRational::getStruct()
+{
+    return drib;
+}
+void TRational::setTop(int a)
+{
+    drib.top = a;
+}
+int TRational::getTop()
+{
+    return drib.top;
+}
+void TRational::setBot(int a)
+{
+    drib.bot = a;
+}
+int TRational::getBot()
+{
+    return drib.bot;
 }

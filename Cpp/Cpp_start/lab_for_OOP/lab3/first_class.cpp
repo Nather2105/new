@@ -43,7 +43,7 @@ rat mul(rat, rat);
 rat div(rat, rat);
 
 //скорочення
-void reduce(pr);
+rat reduce(pr);
 
 //підготовка для виводу
 char *toPChar(rat);
@@ -64,16 +64,17 @@ int main()
     init(&a);
     init(&b);
     while(check != 'x'){ //меню
-        printf("a + b  - type 1\n");
-        printf("a - b - type 2\n");
-        printf("a * b - type 3\n");
-        printf("a / b - type 4\n");
-        printf("a eql b? - type 5\n");
-        printf("a > b? - type 6\n");
-        printf("a < b? - type 7\n");
-        printf("to print a - type 8\n");
-        printf("to print b - type 9\n");
-        scanf("%c", &check);
+        cout << "a + b  - type 1\n";
+        cout << "a - b - type 2\n";
+        cout << "a * b - type 3\n";
+        cout << "a / b - type 4\n";
+        cout << "a eql b? - type 5\n";
+        cout << "a > b? - type 6\n";
+        cout << "a < b? - type 7\n";
+        cout << "to print a - type 8\n";
+        cout << "to print b - type 9\n";
+        // scanf("%c", &check);
+        cin >> check;
         if(check =='1'){
             output(add(a,b));
         }
@@ -105,34 +106,38 @@ int main()
 }
 
 
-void reduce(pr c)
+rat reduce(rat c)
 {
     int min, i, ctop;
-    ctop = abs(c->top);
+    rat d;
+    ctop = abs(c.top);
 
-    if (c->bot > ctop)
+    if (c.bot > ctop)
     {
         min = ctop;
     }
-    else if (c->bot < ctop)
+    else if (c.bot < ctop)
     {
-        min = c->bot;
+        min = c.bot;
     }
     else
     {
-        c->bot = 1;
-        c->top = 1;
-        return;
+        d.bot = 1;
+        d.top = 1;
+        return d;
     }
     for (i = min; i > 1; i--)
     {
-        if (c->bot % i == 0 && ctop % i == 0)
+        if (c.bot % i == 0 && ctop % i == 0)
         {
-            c->bot = c->bot / i;
-            c->top = c->top / i;
-            return;
+            d.bot = c.bot / i;
+            d.top = c.top / i;
+            return d;
         }
     }
+    d.bot = c.bot;
+    d.top = c.top;
+    return d;
 }
 
 void init(pr a)
@@ -163,7 +168,7 @@ char* toPChar(rat a)
 
 void output(rat a)
 {
-    printf("%s\n", toPChar(a));
+    cout << toPChar(a) << endl;
 }
 
 rat add(rat a, rat b)
@@ -179,7 +184,7 @@ rat add(rat a, rat b)
         c.top = a.top * b.bot + b.top * a.bot;
         c.bot = a.bot * b.bot;
     }
-    reduce(&c);
+    c = reduce(c);
     return c;
 }
 
@@ -196,7 +201,7 @@ rat sub(rat a, rat b)
         c.top = a.top * b.bot - b.top * a.bot;
         c.bot = a.bot * b.bot;
     }
-    reduce(&c);
+    c = reduce(c);
     return c;
 }
 
@@ -206,7 +211,7 @@ rat mul(rat a, rat b)
     c.top = a.top * b.top;
     c.bot = a.bot * b.bot;
 
-    reduce(&c);
+    c = reduce(c);
     return c;
 }
 
@@ -216,7 +221,7 @@ rat div(rat a, rat b)
     c.top = a.top * b.bot;
     c.bot = a.bot * b.top;
 
-    reduce(&c);
+    c = reduce(c);
     return c;
 }
 
@@ -224,12 +229,12 @@ int equ(rat a, rat b)
 {
     if (a.bot == b.bot && a.top == b.top)
     {
-        printf("yeah\n");
+        cout << "yeah\n";
         return 1;
     }
     else
     {
-        printf("nope\n");
+        cout << "nope\n";
         return 0;
     }
 }
@@ -239,12 +244,12 @@ int bigger(rat a, rat b)
     rat c = sub(a, b);
     if (c.top < 0)
     {
-        printf("nope\n");
+        cout << "nope\n";
         return 0;
     }
     else
     {
-        printf("yeah\n");
+        cout << "yeah\n";
         return 1;
     }
 }
@@ -254,12 +259,12 @@ int smaller(rat a, rat b)
     rat c = sub(a, b);
     if (c.top < 0)
     {
-        printf("yeah\n");
+        cout << "yeah\n";
         return 1;
     }
     else
     {
-        printf("nope\n");
+        cout << "nope\n";
         return 0;
     }
 }

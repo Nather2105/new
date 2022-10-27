@@ -3,4 +3,7 @@ $(document).ready(function() {
     $('.header__burger,.header_menu,.nav').toggleClass('active');
     $('body').toggleClass('lock');
   });
+  // $('.trainers').slick();
 });
+
+
