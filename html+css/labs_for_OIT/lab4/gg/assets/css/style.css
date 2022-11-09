@@ -256,6 +256,7 @@ body {
     font-weight: 500;
     font-family: 'Signika Negative';
     font-size: 18px;
+    /* z-index: -1; */
 }
 
 /* .add_for_train {
@@ -583,7 +584,6 @@ body {
     }
 }
 
-
 @media screen and (max-width: 800px) {
     .intro_title {
         font-size: 80px;
@@ -659,6 +659,9 @@ body {
     display: none;
 }
 
+.btn__reg_ent.active {
+    display: none;
+}
 @media screen and (max-width: 755px) {
     body.lock {
         overflow: hidden;
@@ -673,6 +676,20 @@ body {
         margin-right: 10px
     }
 
+    .btn__reg_ent {
+        z-index: 1;
+        position: relative;
+    }
+
+    .footer {
+        z-index: 1;
+        position: relative;
+    }
+
+    .btn {
+        z-index: 1;
+        position: relative;
+    }
     .header__burger span {
         position: absolute;
         background-color: #fff;
@@ -713,6 +730,7 @@ body {
     }
 
     .nav.active {
+        z-index: 2;
         background-color: black;
     }
 

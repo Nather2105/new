@@ -7,6 +7,7 @@
     text-decoration: none;
     text-transform: uppercase;
     transition: 0.5s ease;
+    top: 30px;
 }
 
 .card {
@@ -21,8 +22,12 @@
     box-sizing: border-box;
     padding: 48px;
     text-align: center;
+    padding-top: 10px;
 }
 
+.card.active {
+    display: none;
+}
 .products {
     height: 48vh;
     position: relative;
@@ -50,6 +55,7 @@
 } */
 
 .title {
+    padding-top: -25px;
     margin: 0 0 12px;
     color: #000000;
     font-size: 18px;
@@ -64,7 +70,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 0 -12px -12px;
+    margin: -12px -12px;
 }
 
 [ripple] {

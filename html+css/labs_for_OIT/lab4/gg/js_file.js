@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $('.header__burger').click(function (event) {
-        $('.header__burger,.header_menu,.nav').toggleClass('active');
+        $('.header__burger,.header_menu,.nav,.card,.btn__reg_ent').toggleClass('active');
         $('body').toggleClass('lock');
     });
     // $('.trainers').slick();
@@ -8,19 +8,21 @@ $(document).ready(function () {
 
     // ---------------- Slider ------------------------
 
-    // var getProductHeight = $('.product.active').height();
+    let height = $('.product.active').height();
+    calcProductHeight(height);
 
-    $('.products').css({
-        height: 483.109
-    });
 
-    // function calcProductHeight() {
-    //     getProductHeight = $('.product.active').height();
-    //
-    //     $('.products').css({
-    //         height: getProductHeight
-    //     });
-    // }
+    function calcProductHeight(height) {
+        if (height == 0)
+            getProductHeight = 490;
+        else
+            getProductHeight = height
+        console.log(getProductHeight);
+
+        $('.products').css({
+            height: getProductHeight
+        });
+    }
 
     // function animateContentColor() {
     //   var getProductColor = $('.product.active').attr('product-color');
@@ -55,7 +57,7 @@ $(document).ready(function () {
             productCurrentItem = productItem.first().addClass('active');
         }
 
-        // calcProductHeight();
+        calcProductHeight();
         // animateContentColor();
     });
 
@@ -72,9 +74,49 @@ $(document).ready(function () {
             productCurrentItem = productItem.last().addClass('active');
         }
         //
-        // calcProductHeight();
+        calcProductHeight();
         // animateContentColor();
     });
+
+    // Ripple
+
+
+    // $('.products').css({
+    //     height: 453.109
+    // });
+
+    // var productItem = $('.product'),
+    //     productCurrentItem = productItem.filter('.active');
+
+    // $('#next').on('click', function (e) {
+    //     e.preventDefault();
+
+    //     var nextItem = productCurrentItem.next();
+
+    //     productCurrentItem.removeClass('active');
+
+    //     if (nextItem.length) {
+
+    //         productCurrentItem = nextItem.addClass('active');
+    //     } else {
+    //         productCurrentItem = productItem.first().addClass('active');
+    //     }
+
+    // });
+
+    // $('#prev').on('click', function (e) {
+    //     e.preventDefault();
+
+    //     var prevItem = productCurrentItem.prev();
+
+    //     productCurrentItem.removeClass('active');
+
+    //     if (prevItem.length) {
+    //         productCurrentItem = prevItem.addClass('active');
+    //     } else {
+    //         productCurrentItem = productItem.last().addClass('active');
+    //     }
+    // });
 
     // Ripple
 
