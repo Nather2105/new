@@ -1,6 +1,9 @@
 from random import randint
 
-n = input()
+n = input("input n:")
+if n < 1:
+    exit("error, n must be more than 1")
+    
 start = []
 odd_max = [] 
 even_min = []
