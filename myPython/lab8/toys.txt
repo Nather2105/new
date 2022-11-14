@@ -1,0 +1,5 @@
+ball1 100 5
+doll 1000 3
+ball2 50 10
+car 300 4
+lego 875 3
