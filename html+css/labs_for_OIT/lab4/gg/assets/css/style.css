@@ -126,6 +126,8 @@ body {
 .intro_p_title {
     display: flex;
     justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 15px;
 }
 
 
@@ -398,26 +400,6 @@ body {
 
 }
 
-/* .trainers_t.first {
-    background: url("../imgs/kamal_ahmedov_personalnyj_trener-250x400-129.jpeg") center no-repeat;
-}
-
-.trainers_t.second {
-
-    background: url("../imgs/trener_lev-250x400-08c.jpeg") center no-repeat;
-}
-
-.trainers_t.third {
-
-    background: url("../imgs/trener_mahail-250x400-5bd.jpeg") center no-repeat;
-}
-
-.trainers_t.fourth {
-
-    background: url("../imgs/thumbnail_kopylov_pavel-250x400-a9a.jpeg") center no-repeat;
-} */
-
-
 .ivents {
     display: flex;
     justify-content: space-between;
@@ -506,7 +488,7 @@ body {
 }
 
 .input_reg_ent {
-    font-size: 20px;
+    font-size: 25px;
     height: 40px;
     width: 300px;
     line-height: 30px;
@@ -518,13 +500,17 @@ body {
     transition: border-color .2s linear;
 }
 
-.input_reg_ent.first {
+.legenda{
+    font-size: 30px;
+    font-weight: 700;
+}
+/* .input_reg_ent.first {
     margin-left: 110px;
 }
 
 .input_reg_ent.second {
     margin-left: 55px;
-}
+} */
 
 .input_reg_ent::placeholder {
     color: rgba(255, 255, 255, 0.7);
@@ -543,6 +529,7 @@ body {
     font-size: 25px;
     font-weight: 700;
     text-align: left;
+    max-width: 100%;
 }
 
 .pad {
@@ -550,23 +537,37 @@ body {
 }
 
 .area_k {
-    height: 225px;
+    height: 200px;
+    width: 225px;
     resize: none;
 }
 
 .field {
-    width: 300px;
+    width: 50px;
+    
 }
 
 .lower {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 22px;
+    /* text-align: left; */
+}
+
+.left {
+    text-align: left;
 }
 
 .card {
     display: none;
 }
 
+.card1 {
+    display: none;
+}
+
+.card2 {
+    display: none;
+}
 @media screen and (min-width: 900px) {
     .hamburger-menu {
         display: none;
@@ -601,6 +602,9 @@ body {
     .intro_title {
         font-size: 70px;
     }
+    .intro_t_title {
+        font-size: 50px;
+    }
 
     .intro {
         height: 120vh;
@@ -608,11 +612,8 @@ body {
 }
 
 @media screen and (max-width: 980px) {
-    .ivents {
-        display: none;
-    }
 
-    .trainers {
+    .ivents, .trainers, .intro_p_title {
         display: none;
     }
 
@@ -623,8 +624,22 @@ body {
     .card {
         display: block;
     }
+    .card1 {
+        display: block;
+    }
+    .card2 {
+        display: block;
+    }
 }
 
+@media screen and (max-width: 1250px) {
+    .edit {
+        margin-left: 10px;
+    }
+    .edit1 {
+        margin-left: -10px;
+    }
+}
 @media screen and (max-width: 450px) and (max-height: 950px) {
     .intro_title {
         font-size: 50px;
@@ -659,9 +674,10 @@ body {
     display: none;
 }
 
-.btn__reg_ent.active {
+.btn__reg_ent.active, .btn_ivts_mobile.active, .btn.active {
     display: none;
 }
+
 @media screen and (max-width: 755px) {
     body.lock {
         overflow: hidden;
@@ -677,6 +693,11 @@ body {
     }
 
     .btn__reg_ent {
+        z-index: 1;
+        position: relative;
+    }
+
+    .card2.active {
         z-index: 1;
         position: relative;
     }
