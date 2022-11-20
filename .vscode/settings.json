@@ -4,6 +4,7 @@
         "bitset": "c",
         "memory": "c",
         "utility": "c",
-        "random": "cpp"
+        "random": "cpp",
+        "iostream": "cpp"
     }
 }

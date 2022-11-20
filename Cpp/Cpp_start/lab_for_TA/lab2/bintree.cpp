@@ -27,7 +27,7 @@ struct Tree *tree_balance(int n)
   else {
           nl=n/2; 
           nr=n-nl-1;
-          q=malloc(sizeof(struct Tree));   //(C++) q=new Tree;
+          q=(struct Tree*)malloc(sizeof(struct Tree));   //(C++) q=new Tree;
           q->data=rand()%(100-1)+1;
           q->left=tree_balance(nl);
           q->rigth=tree_balance(nr);
@@ -65,7 +65,6 @@ void change(struct Tree *p)
       
     change(p->left);  
    }
-   else p->rigth;
    
    
   if ( p->rigth != NULL ){
@@ -107,7 +106,6 @@ void even_numbers(struct Tree *p ,int* count_p, int* a_p)
       
     even_numbers(p->left, *(&count_p), *(&a_p));  
    }
-   else p->rigth;
    
    
   if ( p->rigth != NULL ){
@@ -125,10 +123,9 @@ void even_numbers(struct Tree *p ,int* count_p, int* a_p)
 
  }
 
-/////////////////////////////////////////////////////////////////////////////////////////////
-
 void odd_numbers(struct Tree *p ,int* count_n, int* a_n)
-{ int i = *count_n;
+{ 
+   int i = *count_n;
    
    if (p==NULL) 
       printf("Element not found\n"); 
@@ -155,7 +152,6 @@ void odd_numbers(struct Tree *p ,int* count_n, int* a_n)
     odd_numbers(p->left, *(&count_n), *(&a_n));  
    }
    
-   else p->rigth;
    
    
   if ( p->rigth != NULL ){
@@ -173,8 +169,6 @@ void odd_numbers(struct Tree *p ,int* count_n, int* a_n)
 
  }
 
-//////////////////////////////////////////////////////////////////////////////////////////////////
-
 struct Tree *even_tree(int n, int a_p[] , int* i)
 {
    
@@ -184,7 +178,7 @@ struct Tree *even_tree(int n, int a_p[] , int* i)
   else {
           nl=n/2; 
           nr=n-nl-1;
-          q=malloc(sizeof(struct Tree));
+          q=(struct Tree*)malloc(sizeof(struct Tree));
           q->data= a_p[*i];
           
           *i = *i+1;
@@ -228,8 +222,6 @@ int main()
    for (i=0; i<count_p;i++){
       printf("%d|", a_p[i]);
    }
-   printf("\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
-   //***********************************************************************************************
    odd_numbers(root, &count_n, &a_n[0]);
    change(root);
    
@@ -237,24 +229,14 @@ int main()
    for (i=0; i<count_n;i++){
       printf("%d|", a_n[i]);
    }
-   printf("\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
    PrintTree(root,n);
    
-  ////////////////////////////////////////////////////////////////////////////////////////////////////// 
-   
-   
-   
-   
- //*************************************************************************************////////////  
-   printf("\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
    printf("\n Надрукуємо дерево з парними числами \n");
    i = 0;
    
    even_t = even_tree(count_p, a_p, &i );
    PrintTree(even_t, count_p);
    
-   /////////////////////////////////////////////////////////////////////////////////////////////////////////////
-   printf("\n||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||\n");
    printf("\n Надрукуємо дерево з НЕ парними числами \n");
    i = 0;
    
