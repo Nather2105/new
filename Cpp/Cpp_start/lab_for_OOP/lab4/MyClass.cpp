@@ -46,32 +46,41 @@ void MyClass::print_xs()
     }
 }
 
-void MyClass::get_the_answer()
+float MyClass::get_the_answer(float x)
 {
-    float x, sum;
+    float  sum;
     int i;
-    cout << "input x:" << endl;
-    cin >> x;
     sum = 0;
     for (i = n; i >= 0; i--)
     {
         sum += (arr[i]) * pow(x, i);
     }
-    cout << "answer is " << sum << endl;
+    return sum;
 }
-void MyClass::pohidna()
+MyClass& MyClass::operator=(MyClass& b)
 {
-    float x, sum, step;
+    n = b.n;
+    
+    free(arr);
+    arr = (float *)malloc(sizeof(float) * (b.n + 1));
+    
+    for(int i = 0; i <= n; i++){
+        arr[i] = b.arr[i];
+    }
+    return *this;
+}
+MyClass& MyClass::pohidna()
+{
+    MyClass pohid;
     int i;
-    cout << "input x:" << endl;
-    cin >> x;
-    sum = 0;
+    pohid.n = n-1;
+    pohid.arr = (float*)malloc(sizeof(float)* n);
     for (i = 1; i <= n; i++)
     {
-        step = i * arr[i] * pow(x, i - 1);
-        sum += step;
+        pohid.arr[i-1] = i * arr[i];
     }
-    cout << "pohidna is " << sum << endl;
+    *this = pohid;
+    return *this;    
 }
 
 void MyClass::pqx()
@@ -236,7 +245,7 @@ MyClass operator*(MyClass a, MyClass b)
     return c;
 }
 
-MyClass div_mnogo(MyClass a, MyClass b)
+void div_mnogo(MyClass a, MyClass b)
 {
     MyClass c;
     int i, j, z, step, k;
@@ -245,14 +254,12 @@ MyClass div_mnogo(MyClass a, MyClass b)
     if (a.n < b.n)
     {
         cout << "error" << endl;
-        return NULL;
+        return;
     }
-
-    // c = (MyClass* )malloc(sizeof(MyClass) * 2);
 
     c.n = a.n;
     c.arr = (float *)malloc(sizeof(float) * (c.n + 1)); // частка
-    // d.arr = (float *)malloc(sizeof(float) * (c.n + 1)); // остача
+    
 
     for (i = 0; i <= c.n; i++)
     {
@@ -278,5 +285,4 @@ MyClass div_mnogo(MyClass a, MyClass b)
     }
         c.print_xs(); 
         a.print_xs(); 
-    return c;
 }

@@ -13,16 +13,17 @@ class MyClass
         MyClass(); //done
         ~MyClass(); //done
         void print_xs(); //done
-        void get_the_answer(); //done
-        void pohidna(); //done
+        float get_the_answer(float); //done
+        MyClass& pohidna(); //done
         void pqx(); //done
         void xbpx(); //done
         void pxb(); //done
         friend MyClass operator+(MyClass, MyClass); //done
         friend MyClass operator-(MyClass, MyClass); //done
         friend MyClass operator*(MyClass, MyClass); //done
+        MyClass& operator=(MyClass&); //done
         friend MyClass copy(MyClass*, MyClass); //done
-        friend MyClass div_mnogo(MyClass, MyClass); // done
+        friend void div_mnogo(MyClass, MyClass); // done
 
 };
 

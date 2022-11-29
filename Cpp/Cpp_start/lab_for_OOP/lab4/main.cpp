@@ -9,30 +9,34 @@ int main()
     cout << "input n for ob1:\n";
     cin >> n;
     MyClass me(n), me1, me2;
-    cout << "input n for ob2:\n";
+    cout << "\ninput n for ob2:\n";
     cin >> n;
     MyClass iam(n);
+    cout << endl;
+    cout << "choose your way:" << endl;
+    cout << "1 - answer in point x" << endl;
+    cout << "2 - pohidna in point x" << endl;
+    cout << "3 - answer in point q(x)" << endl;
+    cout << "4 - answer in func (x-b)*p(x)" << endl;
+    cout << "5 - answer in func p(x+b)" << endl;
+    cout << "6 - check how copy func works" << endl;
+    cout << "7 - ob1 + ob2" << endl;
+    cout << "8 - ob1 - ob2" << endl;
+    cout << "9 - ob1 * ob2" << endl;
+    cout << "10 - ob1 / ob2" << endl;
     while (p != 20){
-        cout << endl;
-        cout << "choose your way:" << endl;
-        cout << "1 - answer in point x" << endl;
-        cout << "2 - pohidna in point x" << endl;
-        cout << "3 - answer in point q(x)" << endl;
-        cout << "4 - answer in func (x-b)*p(x)" << endl;
-        cout << "5 - answer in func p(x+b)" << endl;
-        cout << "6 - check how copy func works" << endl;
-        cout << "7 - ob1 + ob2" << endl;
-        cout << "8 - ob1 - ob2" << endl;
-        cout << "9 - ob1 * ob2" << endl;
-        cout << "10 - ob1 / ob2" << endl;
         
         cin >> p;
 
         if(p == 1){
-            me.get_the_answer();
+            float x;
+            cout << "input x:" << endl;
+            cin >> x;
+            cout << "answer is " << me.get_the_answer(x);
         }
         else if(p == 2){
-            me.pohidna();
+            me1 = me.pohidna();
+            me1.print_xs();
         }
         else if(p == 3){
             me.pqx();
