@@ -35,8 +35,7 @@ body {
     width: 100%;
     height: 100vh;
 
-    background:
-        url("../imgs/maxresdefault.jpeg") center no-repeat #333;
+    background: url("../imgs/maxresdefault.jpeg") center no-repeat #333;
     -webkit-background-size: cover;
     background-size: cover;
     position: relative;
@@ -127,6 +126,8 @@ body {
 .intro_p_title {
     display: flex;
     justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 15px;
 }
 
 
@@ -252,6 +253,17 @@ body {
 
 }
 
+.traine_desk {
+    color: black;
+    font-weight: 500;
+    font-family: 'Signika Negative';
+    font-size: 18px;
+    /* z-index: -1; */
+}
+
+/* .add_for_train {
+
+} */
 .btn:hover {
     background-color: #fff;
     color: #333;
@@ -274,14 +286,40 @@ body {
     color: #fff;
     text-transform: uppercase;
     margin-top: -58px;
-    position:absolute;
-    bottom : 0;
-
+    position: absolute;
+    bottom: 0;
 
 
     transition: background 0.2s linear,
         color 0.2s linear;
 
+}
+
+.btn_ivts_mobile {
+    z-index: 1;
+    position: absolute;
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    left: 7%;
+    text-decoration: none;
+    margin-bottom: 5px !important;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    bottom: 0;
+    transition: background 0.2s linear, color 0.2s linear;
+    background-color: #000000 !important;
+    border-radius: 5px;
+    font-size: 17px;
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 6px 18px;
+}
+
+.btn_ivts_mobile:hover {
+    background-color: white !important;
+    color: black;
+    border: solid 2px black;
 }
 
 .btn_ivts:hover {
@@ -353,33 +391,14 @@ body {
 }
 
 .trainers_com {
-  /* margin: 0;
-  padding: 0; */
+    /* margin: 0;
+    padding: 0; */
 
-  justify-content: space-between;
-  display: flex;
-  font-size: 14px;
+    justify-content: space-between;
+    display: flex;
+    font-size: 14px;
 
 }
-/* .trainers_t.first {
-    background: url("../imgs/kamal_ahmedov_personalnyj_trener-250x400-129.jpeg") center no-repeat;
-}
-
-.trainers_t.second {
-
-    background: url("../imgs/trener_lev-250x400-08c.jpeg") center no-repeat;
-}
-
-.trainers_t.third {
-
-    background: url("../imgs/trener_mahail-250x400-5bd.jpeg") center no-repeat;
-}
-
-.trainers_t.fourth {
-
-    background: url("../imgs/thumbnail_kopylov_pavel-250x400-a9a.jpeg") center no-repeat;
-} */
-
 
 .ivents {
     display: flex;
@@ -393,7 +412,7 @@ body {
     height: 40vh;
     border: 3px solid #fff;
     font-size: 10px;
-    position:relative;
+    position: relative;
     padding-bottom: 500px;
     /* display: flex; */
     /* padding-top: 50px; */
@@ -469,7 +488,7 @@ body {
 }
 
 .input_reg_ent {
-    font-size: 20px;
+    font-size: 25px;
     height: 40px;
     width: 300px;
     line-height: 30px;
@@ -479,15 +498,24 @@ body {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0);
     transition: border-color .2s linear;
+    position: relative;
+    z-index: 1;
 }
 
-.input_reg_ent.first {
+.input_reg_ent.active {
+    display: none;
+}
+.legenda{
+    font-size: 30px;
+    font-weight: 700;
+}
+/* .input_reg_ent.first {
     margin-left: 110px;
 }
 
 .input_reg_ent.second {
     margin-left: 55px;
-}
+} */
 
 .input_reg_ent::placeholder {
     color: rgba(255, 255, 255, 0.7);
@@ -506,166 +534,268 @@ body {
     font-size: 25px;
     font-weight: 700;
     text-align: left;
+    max-width: 100%;
 }
 
 .pad {
     margin-top: -10px;
 }
+
 .area_k {
-    height: 225px;
+    height: 200px;
+    width: 225px;
     resize: none;
 }
 
 .field {
-    width: 300px;
+    width: 50px;
+    
 }
 
 .lower {
-    font-weight: 500;
+    font-weight: 700;
     font-size: 22px;
+    /* text-align: left; */
 }
 
+.left {
+    text-align: left;
+}
+
+.card {
+    display: none;
+}
+
+.card1 {
+    display: none;
+}
+
+.card2 {
+    display: none;
+}
 @media screen and (min-width: 900px) {
-	.hamburger-menu {
-		display: none;
-		font-size: 0px;
-	}
+    .hamburger-menu {
+        display: none;
+        font-size: 0px;
+    }
 }
 
 @media screen and (max-width: 1200px) {
-  .hotline_inside {
-    display: inline-block;
-  }
-  .intro_title {
-    font-size: 110px;
-  }
-
-  @media screen and (max-width: 800px) {
-    .intro_title {
-      font-size: 80px;
+    .hotline_inside {
+        display: inline-block;
     }
+
+    .intro_title {
+        font-size: 110px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .intro_title {
+        font-size: 80px;
+    }
+
     /* .trainers {
-      display: inline-block;
-    } */
+          display: inline-block;
+        } */
     /* .intro_t {
-      height: 200vh;
-    } */
-  }
-  @media screen and (max-width: 540px) {
-    .intro_title {
-      font-size: 70px;
-    }
-    .intro {
-      height: 120vh;
-    }
-  }
-  @media screen and (max-width: 450px) and (max-height: 950px) {
-    .intro_title {
-      font-size: 50px;
-    }
-      .intro {
-        height: 110vh;
-      }
-    .btn {
-      margin-top: 10px;
-    }
-  }
-  @media screen and (max-width: 400px) {
-    .intro {
-      height: 125vh;
-    }
-  }
+          height: 200vh;
+        } */
+}
 
-  @media screen and (max-width: 300px) {
-    .intro {
-      height: 160vh;
-    }
+@media screen and (max-width: 540px) {
     .intro_title {
-      font-size: 30px;
+        font-size: 70px;
     }
-  }
-  .header__burger {
+    .intro_t_title {
+        font-size: 50px;
+    }
+
+    .intro {
+        height: 120vh;
+    }
+}
+
+@media screen and (max-width: 980px) {
+
+    .ivents, .trainers, .intro_p_title {
+        display: none;
+    }
+
+    .trainers_com {
+        display: none;
+    }
+
+    .card {
+        display: block;
+    }
+    .card1 {
+        display: block;
+    }
+    .card2 {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .edit {
+        margin-left: 10px;
+    }
+    .edit1 {
+        margin-left: -10px;
+    }
+}
+@media screen and (max-width: 450px) and (max-height: 950px) {
+    .intro_title {
+        font-size: 50px;
+    }
+
+    .intro {
+        height: 110vh;
+    }
+
+    .btn {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .intro {
+        height: 125vh;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .intro {
+        height: 160vh;
+    }
+
+    .intro_title {
+        font-size: 30px;
+    }
+}
+
+.header__burger {
     display: none;
-  }
-  @media screen and (max-width: 755px){
+}
+
+.btn__reg_ent.active, .btn_ivts_mobile.active, .btn.active {
+    display: none;
+}
+
+@media screen and (max-width: 755px) {
     body.lock {
-      overflow: hidden;
+        overflow: hidden;
     }
+
     .header__burger {
-      display: block;
-      position: relative;
-      width: 30px;
-      height: 20px;
-      z-index: 3;
-      margin-right: 10px
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+        margin-right: 10px
+    }
+
+    .btn__reg_ent {
+        z-index: 1;
+        position: relative;
+    }
+
+    .card2.active {
+        z-index: 1;
+        position: relative;
+    }
+
+    .footer {
+        z-index: 1;
+        position: relative;
+    }
+
+    .btn {
+        z-index: 1;
+        position: relative;
     }
     .header__burger span {
-      position: absolute;
-      background-color: #fff;
-      left: 0;
-      width: 30px;
-      height: 2px;
-      top: 9px;
-      transition: all 0.3s ease 0s;
+        position: absolute;
+        background-color: #fff;
+        left: 0;
+        width: 30px;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s ease 0s;
     }
 
-    .header__burger::after,.header__burger::before {
-      content: '';
-      background-color: #fff;
-      position: absolute;
-      width: 30px;
-      height: 2px;
-      left: 0;
-      transition: all 0.3s ease 0s;
-    }
-    .header__burger::after{
-      bottom: 0;
-    }
+    .header__burger::after,
     .header__burger::before {
-      top: 0;
+        content: '';
+        background-color: #fff;
+        position: absolute;
+        width: 30px;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s ease 0s;
     }
+
+    .header__burger::after {
+        bottom: 0;
+    }
+
+    .header__burger::before {
+        top: 0;
+    }
+
     .nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 110%;
-      padding: 70px 0px 0px 0px;
-      transition: all 0.3s ease 0s;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110%;
+        padding: 70px 0px 0px 0px;
+        transition: all 0.3s ease 0s;
     }
+
     .nav.active {
-      background-color: black;
+        z-index: 2;
+        background-color: black;
     }
-    .header_menu{
-      position: absolute;
-      display: grid;
-      top: -100%;
-      margin-top: 60px;
-      transition: all 0.3s ease 0s;
+
+    .header_menu {
+        position: absolute;
+        display: grid;
+        top: -100%;
+        margin-top: 60px;
+        transition: all 0.3s ease 0s;
     }
+
     .header_menu.active {
-      top: 0;
+        top: 0;
     }
+
     .header_logo {
-      z-index: 1;
+        z-index: 1;
     }
+
     .header {
-      position: fixed;
+        position: fixed;
     }
+
     .nav_link {
         margin-top: 15px;
         font-weight: 700;
     }
-  }
-  .header__burger.active span {
+}
+
+.header__burger.active span {
     transform: scale(0);
-  }
-  .header__burger.active::before {
+}
+
+.header__burger.active::before {
     transform: rotate(45deg);
     top: 9px;
-  }
-  .header__burger.active::after {
+}
+
+.header__burger.active::after {
     transform: rotate(-45deg);
     bottom: 9px;
-  }
 }
