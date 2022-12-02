@@ -40,30 +40,30 @@ int main(int argc, char const *argv[]) {
     Info input;
     int n, index = 1, option;
 
-    cout << "1 - Вставити новий елемент" << endl;
-    cout << "2 - Знайти кількість замовлень на вказаний час" << endl;
-    cout << "3 - Знайти кількість замовлень за номером машини" << endl;
-    cout << "4 - Знайти кількість замовлень ПІ водія" << endl;
-    cout << "5 - Вивести словник" << endl;
-    cout << "6 - Вийти" << endl;
+    cout << "1 - add new element" << endl;
+    cout << "2 - find amount of offers by time" << endl;
+    cout << "3 - find amount of offers by number of car" << endl;
+    cout << "4 - find amount of offers by name" << endl;
+    cout << "5 - output of info" << endl;
+    cout << "6 - exit" << endl;
 
     do {
-        cout << endl << "Що ви хочете зробити? Введіть відповідний номер: ";
+        cout << endl << "what would you like to do: ";
         cin >> option;
 
         switch (option) {
             case 1:
                 cout << endl;
 
-                cout << "Введіть номер авто " << index << "-ї особи: ";
+                cout << "input number of car #" << index << " ";
                 cin >> input.number;
                 cin.ignore();
 
-                cout << "Введіть ім'я " << index << "-ї особи: ";
+                cout << "input name of driver #" << index << " ";
                 getline(cin, t_name);
                 input.name = t_name;
 
-                cout << "Введіть час замовлення " << index << "-ї особи: ";
+                cout << "input time of offer for person #" << index << " ";
                 cin >> input.time;
 
                 search(input, root);
@@ -72,37 +72,37 @@ int main(int argc, char const *argv[]) {
                 break;
 
             case 2: 
-                cout << "Введіть час: ";
+                cout << "input time: ";
                 cin >> t_time;
 
                 if(get_time_count(root, t_time) != -1){
-                    cout << "Кількість замолень на вказаний час: " << get_time_count(root, t_time) << endl;
+                    cout << "amount of offers for current time: " << get_time_count(root, t_time) << endl;
                 }
                 else{
-                    cout << "Не знайдено!" << endl;
+                    cout << "didn't find" << endl;
                 }
                 break;
             
             case 3:
-                cout << "Введіть номер авто: ";
+                cout << "input number of car: ";
                 cin >> t_number;
 
                 
                 if(get_number_count(root, t_number) != -1){
-                    cout << "Кількість замоленьза номером авто: " << get_number_count(root, t_number) << endl;
+                    cout << "amount of offers for number of car: " << get_number_count(root, t_number) << endl;
                 }
                 else{
-                    cout << "Не знайдено!" << endl;
+                    cout << "didn't find" << endl;
                 }
                 break;
 
             case 4:
                 cin.ignore();
-                cout << "Введіть ПІ водія: ";
+                cout << "input name of driver: ";
                 getline(cin, t_name);
 
                 if(get_name_count(root, t_name) != -1){
-                    cout << "Кількість замолень за іменем: " << get_name_count(root, t_name) << endl;
+                    cout << "amount of offers by name: " << get_name_count(root, t_name) << endl;
                 }
                 else{
                     cout << "Не знайдено!" << endl;
