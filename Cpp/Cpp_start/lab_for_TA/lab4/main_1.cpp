@@ -28,9 +28,9 @@ class Graph
         int *road;
         int *helper;
         void get_memory_matrix();
-        void get_memory_for_helper_and_for_road();
-        void fill_zeros_for_helper_and_for_road();
-        void print_the_helper_and_the_road();
+        void get_memory_for_helper();
+        void fill_zeros_for_helper();
+        void print_the_helper();
         int create_and_fill_the_matrix();
         void print_the_matrix();
         int helper_do_not_have_it(int);
@@ -47,7 +47,8 @@ int main()
 {
     Graph graph;
     int ans;
-    if(ans = graph.find_the_answer(1, 7)){
+    ans = graph.find_the_answer(1, 7);
+    if(ans){
         cout << "it is possible" << endl;
         cout << ans << " peresadok for short way" << endl;  
     }
@@ -70,29 +71,23 @@ void Graph::get_memory_matrix()
 }
 
 
-void Graph::get_memory_for_helper_and_for_road()
+void Graph::get_memory_for_helper()
 {
-    road = (int*)malloc(n * sizeof(int));
     helper = (int*)malloc(n * sizeof(int));
 }
 
-void Graph::fill_zeros_for_helper_and_for_road()
+void Graph::fill_zeros_for_helper()
 {
     int i;
     
     for(i = 0; i < n; i++){
-        road[i] = 0;
         helper[i] = 0;
     }
 }
 
-void Graph::print_the_helper_and_the_road()
+void Graph::print_the_helper()
 {
     int i;
-    cout << endl;
-    for(i = 0; i < n; i++){
-        cout << road[i] << " ";
-    }
     cout << endl;
     for(i = 0; i < n; i++){
         cout << helper[i] << " ";
@@ -149,9 +144,9 @@ int Graph::create_and_fill_the_matrix()
 Graph::Graph()
 {
     create_and_fill_the_matrix();
-    get_memory_for_helper_and_for_road();
-    fill_zeros_for_helper_and_for_road();
-    print_the_helper_and_the_road();
+    get_memory_for_helper();
+    fill_zeros_for_helper();
+    print_the_helper();
     
 }
 Graph::~Graph()
