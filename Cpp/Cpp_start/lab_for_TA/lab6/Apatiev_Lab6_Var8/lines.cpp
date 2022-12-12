@@ -44,8 +44,7 @@ int compare(const void* a, const void* b) {
 }
 
 int main(int argc, char const *argv[]) {
-    vector<Line> lines = {Line(-5, -2), Line(-3,  0), Line(-2, -1),
-                          Line(1,  3),  Line(2,  4),  Line(4,  7)};
+    vector<Line> lines = {Line(-5, -2), Line(-3,  0), Line(-2, -1), Line(1,  3),  Line(2,  4),  Line(4,  7)};
 
     // vector<Line> lines = {{-2, 0}, {-1.5, -0.5}, {-1, 0.5}, {0.5, 1.5}, {1, 3}, {1.5, 2}};
 

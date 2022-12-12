@@ -96,7 +96,6 @@ Graph::Graph()
     create_and_fill_the_matrix();
     get_memory_for_helper();
     fill_zeros_for_helper();
-    print_the_helper();
     
 }
 Graph::~Graph()

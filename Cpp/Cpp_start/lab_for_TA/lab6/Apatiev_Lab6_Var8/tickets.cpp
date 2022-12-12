@@ -4,7 +4,7 @@
 using namespace std;
 
 int main(int argc, char const *argv[]) {
-    vector<vector<int>> table(3);
+    vector<vector<int> > table(3);
     vector<int> way; 
     int n, el; cin >> n;
 

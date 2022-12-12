@@ -23,3 +23,4 @@ int main()
     max = graph.find_the_answer();
     cout << "min is " << max;
 }
+
