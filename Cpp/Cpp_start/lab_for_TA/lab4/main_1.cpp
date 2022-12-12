@@ -25,7 +25,6 @@ class Graph
     public:
         int n;
         int **matrix;
-        int *road;
         int *helper;
         void get_memory_matrix();
         void get_memory_for_helper();
@@ -48,7 +47,7 @@ int main()
     Graph graph;
     int ans;
     ans = graph.find_the_answer(1, 7);
-    if(ans){
+    if(ans){    
         cout << "it is possible" << endl;
         cout << ans << " peresadok for short way" << endl;  
     }
@@ -146,7 +145,6 @@ Graph::Graph()
     create_and_fill_the_matrix();
     get_memory_for_helper();
     fill_zeros_for_helper();
-    print_the_helper();
     
 }
 Graph::~Graph()
