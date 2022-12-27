@@ -220,7 +220,7 @@ void print_info_about_list(List* list, int n_for_list)
 {
     int i;
     
-    cout << "info about visits for tea:" << endl;
+    cout << "info about visits for tea(amount is " << n_for_list << "):" << endl;
     for(i = 0; i < n_for_list; i++, list = list->next){
         list->tea_visit.print();
 

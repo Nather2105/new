@@ -5,6 +5,7 @@
         "memory": "c",
         "utility": "c",
         "random": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "istream": "cpp"
     }
 }
