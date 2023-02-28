@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="calc.js" defer></script>
+    <script src="converter.js" defer></script>
+    <script src="factorials.js" defer></script>
+    <script src="other.js" defer></script>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script> -->
+    <!-- <script src="./slick.min.js"></script> -->
+    <!-- <script src="./js_file.js"></script> -->
+
+    <title>MyLab</title>
+</head>
+
+<body>
+    <header class="header">
+
+        <div class="container">
+            <div class="header_inner">
+                <div class="header_logo">
+                    <h1 class="hover-logo">MyLab</h1>
+                </div>
+
+                <nav class="nav">
+                    <a href="#first-task" class="nav_link">first task</a>
+                    <a href="#second-task" class="nav_link">second task</a>
+                    <a href="#third-task" class="nav_link">third task</a>
+                </nav>
+            </div>
+        </div>
+        </div>
+        <div class="container">
+            <div class="hover" id="try1">
+                <div class="photo">
+                    <img src="imgs/me.jpeg">
+                </div>
+
+                <div class="text">
+                    My name is Nazar and this is my lab for web-technology.
+                    <br>
+                    Here are located a few simple tasks:
+                    <br>
+                    1. Calculator
+                    <br>
+                    2. Converter for bytes, kilobytes, megabytes, gigabytes, terabytes
+                    <br>
+                    3. Factorial and double factorial of number
+                    <br>
+                    <br>
+                    Also, you can find some information about factorials and types of bytes on the page.
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section>
+        <div id="first-task" class="container header_for_tasks">
+            <h1>Calculator</h1>
+            <div class="calc">
+                <div class="calc-screen">
+                    <p> 0 </p>
+                </div>
+                <div class="buttons">
+                    <div class="btn ac bg-grey">ac</div>
+                    <div class="btn plus-minus bg-grey">+/-</div>
+                    <div class="btn percent bg-grey">%</div>
+                    <div class="btn division bg-orange">/</div>
+
+                    <div class="btn seven">7</div>
+                    <div class="btn eigth">8</div>
+                    <div class="btn nine">9</div>
+                    <div class="btn myltyply bg-orange">x</div>
+
+                    <div class="btn four">4</div>
+                    <div class="btn five">5</div>
+                    <div class="btn six">6</div>
+                    <div class="btn minus bg-orange">-</div>
+
+                    <div class="btn one">1</div>
+                    <div class="btn two">2</div>
+                    <div class="btn three">3</div>
+                    <div class="btn plus bg-orange">+</div>
+
+                    <div class="btn zero">0</div>
+                    <div class="btn dot">.</div>
+                    <div class="btn equal bg-orange">=</div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div id="second-task" class="container header_for_tasks">
+            <h1>Converter</h1>
+            <h2 class="sm-text">You can convert one type of bytes into another one</h2>
+            <input class="input-how-much" type="number" placeholder="input number">
+            <select class="type-from">
+                <option value="bytes">bytes</option>
+                <option value="kilobytes">kilobytes</option>
+                <option value="megabytes">megabytes</option>
+                <option value="gigabytes">gigabytes</option>
+                <option value="terabytes">terabytes</option>
+            </select>
+
+            <select class="type-to">
+                <option value="bytes">bytes</option>
+                <option value="kilobytes">kilobytes</option>
+                <option value="megabytes">megabytes</option>
+                <option value="gigabytes">gigabytes</option>
+                <option value="terabytes">terabytes</option>
+            </select>
+            <button class="btn-result">Result</button>
+            <p class="output"></p>
+            <h2>Some information about types of bytes</h2>
+            <p>
+                A bit is a binary digit, the smallest increment of data on a computer. A bit can hold only one of two
+                values: 0 or 1, corresponding to the electrical values of off or on, respectively.
+
+                Because bits are so small, you rarely work with information one bit at a time. Bits are usually
+                assembled into a group of eight to form a byte. A byte contains enough information to store a single
+                ASCII character, like "h".
+
+                A kilobyte (KB) is 1,024 bytes, not one thousand bytes as might be expected, because computers use
+                binary (base two) math, instead of a decimal (base ten) system.
+
+                Computer storage and memory is often measured in megabytes (MB) and gigabytes (GB). A medium-sized novel
+                contains about 1 MB of information. 1 MB is 1,024 kilobytes, or 1,048,576 (1024x1024) bytes, not one
+                million bytes.
+
+                Similarly, one 1 GB is 1,024 MB, or 1,073,741,824 (1024x1024x1024) bytes. A terabyte (TB) is 1,024 GB; 1
+                TB is about the same amount of information as all of the books in a large library, or roughly 1,610 CDs
+                worth of data. A petabyte (PB) is 1,024 TB. 1 PB of data, if written on DVDs, would create roughly
+                223,100 DVDs, i.e., a stack about 878 feet tall, or a stack of CDs a mile high. Indiana University is
+                now building storage systems capable of holding petabytes of data. An exabyte (EB) is 1,024 PB. A
+                zettabyte (ZB) is 1,024 EB. Finally, a yottabyte (YB) is 1,024 ZB.
+
+                Many hard drive manufacturers use a decimal number system to define amounts of storage space. As a
+                result, 1 MB is defined as one million bytes, 1 GB is defined as one billion bytes, and so on. Since
+                your computer uses a binary system as mentioned above, you may notice a discrepancy between your hard
+                drive's published capacity and the capacity acknowledged by your computer. For example, a hard drive
+                that is said to contain 10 GB of storage space using a decimal system is actually capable of storing
+                10,000,000,000 bytes. However, in a binary system, 10 GB is 10,737,418,240 bytes. As a result, instead
+                of acknowledging 10 GB, your computer will acknowledge 9.31 GB. This is not a malfunction but a matter
+                of different definitions.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div id="third-task" class="container header_for_tasks">
+            <h1>Factorials</h1>
+            <input class="input-how-much-factorial" type="number" placeholder="input number">
+            <button class="btn-result-factorial">Result</button>
+            <p class="output-factorials"></p>
+            <h2>Some information about factorials</h2>
+            <p>
+                You don’t need to yell
+
+                The exclamation mark notation was introduced by French mathematician Christian Kramp in 1808. The idea
+                of multiplying consecutive whole numbers has been around for centuries; people had been using this
+                method to find out the distinct way to order multiple objects (i.e. permutation). Having this notation,
+                as Kramp personally suggested, makes writing down things much easier.
+
+                You might see it as Pi
+
+                The need of multiplying numbers is not unique to the consecutive whole numbers. As a matter of fact,
+                just like the need to add certain terms together (which we use the Sigma notation, Σ, to denote such
+                operation), it is more common to see the product notation Π. A typical Pi notation works just like a
+                Sigma notation; instead of adding, you just multiply each term!
+            </p>
+            <p>
+                Mathematically speaking, calculating factorial is easy: you just multiply a bunch of numbers together.
+                However, simple as it may seem, most computers don’t find the answer by just multiplying.
+                The sheer value means there are certain limitations. Factorials are always integers because it’s the
+                result of multiplying integers together.
+                Modern computers covert our everyday numbers into binary, using only 0s and 1s, before they do any
+                calculation.
+                Older computers are limited to working with 32 binary digits, or bits, which translate to a maximum of
+                2,147,483,647 in decimal.
+                For the newer computers with 64-bit architecture, it can store an integer in decimal value up to
+                9,223,372,036,854,775,807 .
+                Which is a big number. But if you look at the table, you will see that a 32-bit computer can only
+                calculate up to 12!,
+                while 20! is the limit for a 64-bit computer.
+                Beyond these boundaries, most common computers have to resort to approximation to provide an answer.
+            </p>
+            <p>
+                So here it is, certain rules and tricks that you want to remember about factorials.
+
+                0! = 1
+
+                As weird as it may sound, this is a fact that we must remember. There are several ways to explain why
+                this must be true. In mathematics, the empty product rule (which is very different than the “null factor
+                law.” I have written an application of the null factor law in my previous blog, which you can find here)
+                states that when we are multiplying no product, the result is set as default to the multiplicative
+                identity, which is 1. 0! Literally means we are not multiplying any number, so it falls into the empty
+                product rule. Thus, the result should be 1.
+
+                Another way to explain 0! is to look at it like finding ways to order items. We learn from permutation
+                that ! gives you the number of unique ways to order items in distinct sequence. Now think about what 0!
+                represents; it is kind of like “how many ways are you able to put nothing in order.” And the answer is…
+                1 way – by ordering nothing. More importantly, this definition fits into the model or permutation and
+                combination.
+            </p>
+
+        </div>
+    </section>
+
+
+    <footer class="footer hotline">
+    </footer>
+
+</body>
+
+</html>
