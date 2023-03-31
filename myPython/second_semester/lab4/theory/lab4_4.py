@@ -3,11 +3,11 @@ root = Tk()
 def sq1():
     fra.config(width=200,height=200)
     print('200x200')
-    
+
 def sq2():
     fra.config(width=400,height=400)
-    print('4000x4000')
-    
+    print('400x400')
+
 fra = Frame(root,width=300,height=100,bg="Black")
 fra.pack()
 m = Menu(root)
