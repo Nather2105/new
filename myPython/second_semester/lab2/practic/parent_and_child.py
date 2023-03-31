@@ -55,20 +55,20 @@ class Piano(MusicalInstruments):
 class Percussion(Drum, Tambourine): 
     
     def __repr__(self):
-        return ("type of Drum or Tambourine is Percussion")
+        return ("The type of Drum or Tambourine is Percussion")
     
     
     
 class Wind(Trombone, Flute, Organ):
     
     def __repr__(self):
-        return ("type of Trombone, Flute or Organ is Wind")
+        return ("The type of Trombone, Flute or Organ is Wind")
     
     
 class Keyboard(Harmonium, Bayan, Piano):
     
     def __repr__(self):
-        return ("type of Harmonium, Bayan or Piano is Keyboard")
+        return ("The type of Harmonium, Bayan or Piano is Keyboard")
 
 
 musical_instruments = MusicalInstruments()
