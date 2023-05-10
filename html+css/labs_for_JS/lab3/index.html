@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cat shop</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="icon" href="images/icon.png" type="image/png"> -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="js/cards.js" async></script>
+    <script src="js/adv.js" async></script>
+    <script src="js/subscribe.js" async></script>
+
+</head>
+
+<body class="backg">
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="nav_label">
+                    <a href="./index.html">
+                        <img src="imgs/icon.png" alt="Головна" title="Головна" height="80px" min-height="10px">
+                    </a>
+                </div>
+                <div class="search">
+                    <h1 class="nav_text">NOISY CAT</h1>
+                    <!-- <div class="place-for-searching">
+                        <input class="input_place" type="text" alt="Пошук" title="Що хочете знайти?"
+                            placeholder="interested in...">
+                        <button class="nav_search">Search</button>
+                    </div> -->
+                </div>
+
+                <div class="nav_icons">
+                    <a class="header_imgs" href="./news.html">
+                        <img src="imgs/newspaper.png" alt="news" title="news" height="45px" min-height="25px">
+                    </a>
+
+                    <a class="header_imgs" href="./cart.html">
+                        <img src="imgs/shopping-basket.png" alt="Basket" title="Basket" height="45px" min-height="25px">
+                    </a>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="main" id="main">
+            <div class="main_inside">
+                <input class="filter-input" type="text" id="filter-input" placeholder="Searching...">
+                <button class="filter-input-btn" id="filter">Filter</button>
+                <button class="filter-input-btn" id="by_price">By price</button>
+                <button class="filter-input-btn mg-t-sm" id="reset">Reset</button>
+
+            </div>
+            <div class="cards" id="cards"></div>
+            <!-- <div class="show-more-btn"> -->
+            <!-- </div> -->
+            <button id="show-more-btn" class="show-more-btn">show more</button>
+            <!-- </div> -->
+            <br>
+            <div class="main_inside mr">
+                <div class="btns">
+                    Type of graphics:
+                    <button class="filter-input-btn pie"> Pie</button>
+                    <button class="filter-input-btn linear"> Linear</button>
+                    <button class="filter-input-btn column"> Column</button>
+                </div>
+            </div>
+            <div class="chart" id="chartContainer">
+            </div>
+            <button class="to-the-top-btn" id="to-the-top-btn" onclick="scrollToTheTop()">▲</button>
+    </section>
+    <!-- <footer class="footer">
+        Created by Kuryliak Nazarii (group #211a)
+    </footer> -->
+</body>
+
+</html>

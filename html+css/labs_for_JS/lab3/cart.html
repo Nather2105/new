@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cat shop</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="images/icon.png" type="image/png">
+    <!-- <script src="js/cards.js" async></script> -->
+    <script src="js/cart.js" async></script>
+    <script src="js/adv.js" async></script>
+    <script src="js/subscribe.js" async></script>
+</head>
+
+<body class="backg">
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="nav_label">
+                    <a href="./index.html">
+                        <img src="imgs/icon.png" alt="Головна" title="Головна" height="80px" min-height="10px">
+                    </a>
+                </div>
+                <div class="search">
+                    <h1 class="nav_text">NOISY CAT</h1>
+                    
+                    <!-- <div class="place-for-searching">
+                        <input class="input_place" type="text" alt="Пошук" title="Що хочете знайти?"
+                        placeholder="interested in...">
+                        <button class="nav_search">Search</button>
+                    </div> -->
+                </div>
+                
+                <div class="nav_icons">
+                    <a class="header_imgs" href="./news.html">
+                        <img src="imgs/newspaper.png" alt="news" title="news" height="50px" min-height="35px">
+                    </a>
+                    
+                    <a class="header_imgs" href="./cart.html">
+                        <img src="imgs/shopping-basket.png" alt="Basket" title="Basket" height="40px" min-height="25px">
+                    </a>
+                </div>
+                
+            </div>
+        </nav>
+    </header>
+    
+    
+    <section class="container">
+        <div class="main" id="main">
+            <h1 class="additional_plate">Your cart</h1>
+            <div class="main_inside">
+                <input class="filter-input" type="text" id="filter-input" placeholder="Searching...">
+                <button class="filter-input-btn" id="filter">Filter</button>
+                <button class="filter-input-btn" id="by_price">By price</button>
+                <button class="filter-input-btn mg-t-sm" id="reset">Reset</button>
+                <!-- <button class="filter-input-btn mg-t-sm" id="delete">delete a carts</button> -->
+            </div>
+            <div class="cards_for_cart" id="cards_for_cart"></div>
+            <div class="total" id="total"></div>
+            <button class="to-the-top-btn" id="to-the-top-btn" onclick="scrollToTheTop()">▲</button>
+    </section>
+</body>
+
+</html>

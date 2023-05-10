@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cat shop</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="icon" href="images/icon.png" type="image/png"> -->
+    <script src="js/adv.js" async></script>
+    <script src="js/subscribe.js" async></script>
+    <script src="js/create.js" async></script>
+    <script src="js/login_logout.js" async></script>
+
+</head>
+
+<body class="backg">
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="nav_label">
+                    <a href="./index.html">
+                        <img src="imgs/icon.png" alt="Головна" title="Головна" height="80px" min-height="10px">
+                    </a>
+                </div>
+                <div class="search">
+                    <h1 class="nav_text">NOISY CAT</h1>
+                    <h2 class="place_for_nickname"></h2>
+                </div>
+
+                <div class="nav_icons">
+                    <a class="header_imgs" id="profile" href="./profile.html">
+                        <img class="icons profile" src="imgs/user.png" alt="profile" title="profile">
+                    </a>
+                    <a class="header_imgs" id="add" href="./create.html">
+                        <img class="icons add" id="add_icon" src="imgs/add.png" alt="add" title="add">
+                    </a>
+                    <a class="header_imgs" id="add" href="#">
+                        <img class="icons add" id="add_icon" src="imgs/add.png" alt="add" title="add">
+                    </a>
+                    <a class="header_imgs" id="news" href="./news.html">
+                        <img class="icons new_on_nav" src="imgs/newspaper.png" alt="news" title="news">
+                    </a>
+                    <a class="header_imgs" id="backet" href="./cart.html">
+                        <img class="icons backet" src="imgs/shopping-basket.png" alt="Basket" title="Basket">
+                    </a>
+                    <a class="header_imgs" id="signup" href="./registration.html">
+                        <img class="icons signup" src="imgs/sign-up.png" alt="sign-up" title="sign-up">
+                    </a>
+                    <a class="header_imgs" id="login" href="./login.html">
+                        <img class="icons login" src="imgs/log-in.png" alt="Login" title="Login">
+                    </a>
+                    <a class="header_imgs" id="logout" href="#">
+                        <img class="icons logout" id="log_out" src="imgs/log-out.png" alt="Logout" title="Logout">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="main1" id="main1">
+            <h1> Your profile</h1>
+            <div class="labels_and_inputs">
+
+                <label>Path to image</label>
+                <br>
+                <input class="filter-input" id="path_of_new_product" type="text" placeholder="input path">
+            </div>
+            <div class="labels_and_inputs">
+
+                <label>Title for product</label>
+                <br>
+                <input class="filter-input" id="title_of_new_product" type="text" placeholder="input title">
+            </div>
+            <div class="labels_and_inputs old_password">
+                <label>Price</label>
+                <br>
+                <input class="filter-input" id="price_of_new_product" type="text" placeholder="Input price">
+            </div>
+            <div class="labels_and_inputs new_password">
+                <label>Description</label>
+                <br>
+                <input class="filter-input" id="description_of_new_product" type="text" placeholder="input description">
+            </div>
+            <div class="labels_and_inputs">
+                <input class="filter-input-btn" id="create_new_card" type="submit" value="Create">
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

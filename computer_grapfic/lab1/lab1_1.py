@@ -3,6 +3,64 @@ import pygame
 from array import *
 pygame.init()
 
+def final_step(x1,y1,x2,y2,x3,y3,x4,y4):
+    if x1 > x2:
+        min_1 = [x2,y2]
+        max_1 = [x1,y1]
+    else:
+        min_1 = [x1,y1]
+        max_1 = [x2,y2]
+    
+    if x3 > x4:
+        min_2 = [x4,y4]
+        max_2 = [x3,y3]
+    else:
+        min_2 = [x3,y3]
+        max_2 = [x4,y4]
+    
+    if min_1[0] == min_2[0]:
+        start = min_2
+        if max_1[0] >= max_2[0]:
+            finish = max_2
+        else:
+            finish = max_1
+        return [start[0], start[1], finish[0], finish[1]]        
+    
+    if max_1[0] == max_2[0]:
+        start = max_2
+        if min_1[0] > min_2[0]:
+            finish = min_2
+        else:
+            finish = min_1
+        return [start[0], start[1], finish[0], finish[1]]
+    
+    if min_1[0] < min_2[0] and max_1[0] > max_2[0]:
+        start = min_2
+        finish = max_2
+        return [start[0], start[1], finish[0], finish[1]]
+    
+    if min_1[0] > min_2[0] and max_1[0] < max_2[0]:
+        start = min_1
+        finish = max_1
+        return [start[0], start[1], finish[0], finish[1]]
+    
+    if min_1[0] < min_2[0]:
+        if max_1[0] < min_2[0]:
+            return 0
+        elif max_1[0] > min_2[0]:
+            start = min_2
+            finish = max_1
+            return [start[0], start[1], finish[0], finish[1]]
+    
+    if min_1[0] > min_2[0]:
+        if max_2[0] < min_1[0]:
+            return 0
+        elif max_2[0] > min_1[0]:
+            start = min_1
+            finish = max_2
+            return [start[0], start[1], finish[0], finish[1]]
+    
+    return 0
 
 def find_the_answer(x1,y1, x2,y2, x3, y3, x4, y4):
     try:
@@ -39,65 +97,10 @@ def find_the_answer(x1,y1, x2,y2, x3, y3, x4, y4):
         if(mas1 == mas2):
             print("found many solutions in system of equations, so we can`t show it to you")
             if x1 == x2 and x2 == x3 and x3 == x4:
-                print("awer")
+               answ = final_step(y1,x1,y2,x2,y3,x3,y4,x4)
+               return [answ[1], answ[0], answ[3], answ[2]]
             else:
-                if x1 > x2:
-                    min_1 = [x2,y2]
-                    max_1 = [x1,y1]
-                else:
-                    min_1 = [x1,y1]
-                    max_1 = [x2,y2]
-                
-                if x3 > x4:
-                    min_2 = [x4,y4]
-                    max_2 = [x3,y3]
-                else:
-                    min_2 = [x3,y3]
-                    max_2 = [x4,y4]
-                
-                if min_1[0] == min_2[0]:
-                    start = min_2
-                    if max_1[0] >= max_2[0]:
-                        finish = max_2
-                    else:
-                        finish = max_1
-                    return [start[0], start[1], finish[0], finish[1]]        
-                
-                if max_1[0] == max_2[0]:
-                    start = max_2
-                    if min_1[0] > min_2[0]:
-                        finish = min_2
-                    else:
-                        finish = min_1
-                    return [start[0], start[1], finish[0], finish[1]]
-                
-                if min_1[0] < min_2[0] and max_1[0] > max_2[0]:
-                    start = min_2
-                    finish = max_2
-                    return [start[0], start[1], finish[0], finish[1]]
-                
-                if min_1[0] > min_2[0] and max_1[0] < max_2[0]:
-                    start = min_1
-                    finish = max_1
-                    return [start[0], start[1], finish[0], finish[1]]
-                
-                if min_1[0] < min_2[0]:
-                    if max_1[0] < min_2[0]:
-                        return 0
-                    elif max_1[0] > min_2[0]:
-                        start = min_2
-                        finish = max_1
-                        return [start[0], start[1], finish[0], finish[1]]
-                
-                if min_1[0] > min_2[0]:
-                    if max_2[0] < min_1[0]:
-                        return 0
-                    elif max_2[0] > min_1[0]:
-                        start = min_1
-                        finish = max_2
-                        return [start[0], start[1], finish[0], finish[1]]
-                
-                return 0
+               return final_step(x1,y1,x2,y2,x3,y3,x4,y4)
                 
                     
                     

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cat shop</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="icon" href="images/icon.png" type="image/png"> -->
+    <!-- <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+    <!-- <script src="js/cards.js" async></script> -->
+    <script src="js/adv.js" async></script>
+    <!-- <script src="js/registration.js" async></script> -->
+    <script src="js/subscribe.js" async></script>
+    <script src="js/profile.js" async></script>
+    <script src="js/login_logout.js" async></script>
+
+</head>
+
+<body class="backg">
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="nav_label">
+                    <a href="./index.html">
+                        <img src="imgs/icon.png" alt="Головна" title="Головна" height="80px" min-height="10px">
+                    </a>
+                </div>
+                <div class="search">
+                    <h1 class="nav_text">NOISY CAT</h1>
+                    <h2 class="place_for_nickname"></h2>
+                </div>
+
+                <div class="nav_icons">
+                    <a class="header_imgs" id="profile" href="./profile.html">
+                        <img class="icons profile" src="imgs/user.png" alt="profile" title="profile">
+                    </a>
+                    <a class="header_imgs" id="add" href="./create.html">
+                        <img class="icons add" id="add_icon" src="imgs/add.png" alt="add" title="add">
+                    </a>
+                    <a class="header_imgs" id="news" href="./news.html">
+                        <img class="icons new_on_nav" src="imgs/newspaper.png" alt="news" title="news">
+                    </a>
+                    <a class="header_imgs" id="backet" href="./cart.html">
+                        <img class="icons backet" src="imgs/shopping-basket.png" alt="Basket" title="Basket">
+                    </a>
+                    <a class="header_imgs" id="signup" href="./registration.html">
+                        <img class="icons signup" src="imgs/sign-up.png" alt="sign-up" title="sign-up">
+                    </a>
+                    <a class="header_imgs" id="login_nav" href="./login.html">
+                        <img class="icons login" src="imgs/log-in.png" alt="Login" title="Login">
+                    </a>
+                    <a class="header_imgs" id="logout" href="#">
+                        <img class="icons logout" src="imgs/log-out.png" alt="Logout" title="Logout">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="main1" id="main">
+            <h1> Your profile</h1>
+            <div class="labels_and_inputs">
+
+                <label>Your email</label>
+                <br>
+                <input class="filter-input" id="email_for_profile" type="text">
+            </div>
+            <div class="labels_and_inputs">
+
+                <label>Your nickname</label>
+                <br>
+                <input class="filter-input" id="input_for_nickname" type="text">
+            </div>
+            <div class="labels_and_inputs old_password">
+                <label>Your old password</label>
+                <br>
+                <input class="filter-input" id="old_pass" type="text" placeholder="Input your old password">
+            </div>
+            <div class="labels_and_inputs new_password">
+                <label>Your new password</label>
+                <br>
+                <input class="filter-input" id="new_pass" type="text" placeholder="input your new password">
+            </div>
+            <ul class="password-requirements">
+                <li>Великі та малі літери</li>
+                <li>Цифри</li>
+                <li>Мінімум 8 символів</li>
+            </ul>
+            <div class="labels_and_inputs">
+                <input class="filter-input-btn" id="change_nickname_btn_for_profile" type="submit" value="Change nickname">
+            </div>
+            <div class="labels_and_inputs">
+                <input class="filter-input-btn" id="conf_nickname_btn_for_profile" type="submit" value="Confirm nickname changing">
+            </div>
+            <div class="labels_and_inputs">
+                <input class="filter-input-btn" id="change_pass_btn_for_profile" type="submit" value="Change password">
+            </div>
+            <div class="labels_and_inputs">
+                <input class="filter-input-btn" id="conf_pass_btn_for_profile" type="submit" value="Confirm password changing">
+            </div>
+            <div class="labels_and_inputs delete_acc">
+                <label>Your password</label>
+                <br>
+                <input class="filter-input" id="del_acc" type="text" placeholder="input your password">
+            </div>
+            <div class="labels_and_inputs">
+                <input class="filter-input-btn" style="background-color: red;" id="delete_the_account" type="submit" value=" Delete account">
+            </div>
+            
+        </div>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cat shop</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="icon" href="images/icon.png" type="image/png"> -->
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="js/cards.js" async></script>
+    <script src="js/adv.js" async></script>
+    <script src="js/subscribe.js" async></script>
+    <script src="js/login_logout.js" async></script>
+
+</head>
+
+<body class="backg">
+    <header class="header">
+        <nav class="container">
+            <div class="nav">
+                <div class="nav_label">
+                    <a href="./index.html">
+                        <img src="imgs/icon.png" alt="Головна" title="Головна" height="80px" min-height="10px">
+                    </a>
+                </div>
+                <div class="search">
+                    <h1 class="nav_text">NOISY CAT</h1>
+                    <h2 class="place_for_nickname"></h2>
+                </div>
+
+                <div class="nav_icons">
+                    <a class="header_imgs" id="profile" href="./profile.html">
+                        <img class="icons profile" src="imgs/user.png" alt="profile" title="profile">
+                    </a>
+                    <a class="header_imgs" id="add" href="./create.html">
+                        <img class="icons add" id="add_icon" src="imgs/add.png" alt="add" title="add">
+                    </a>
+                    <a class="header_imgs" id="news" href="./news.html">
+                        <img class="icons new_on_nav" src="imgs/newspaper.png" alt="news" title="news">
+                    </a>
+                    <a class="header_imgs" id="backet" href="./cart.html">
+                        <img class="icons backet" src="imgs/shopping-basket.png" alt="Basket" title="Basket">
+                    </a>
+                    <a class="header_imgs" id="signup" href="./registration.html">
+                        <img class="icons signup" src="imgs/sign-up.png" alt="sign-up" title="sign-up">
+                    </a>
+                    <a class="header_imgs" id="login" href="./login.html">
+                        <img class="icons login" src="imgs/log-in.png" alt="Login" title="Login">
+                    </a>
+                    <a class="header_imgs" id="logout" href="#">
+                        <img class="icons logout" id="log_out" src="imgs/log-out.png" alt="Logout" title="Logout">
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="container">
+        <div class="main" id="main">
+            <div class="main_inside">
+                <input class="filter-input" type="text" id="filter-input" placeholder="Searching...">
+                <button class="filter-input-btn" id="filter">Search</button>
+                <button class="filter-input-btn" id="by_price">By price</button>
+                <button class="filter-input-btn mg-t-sm" id="reset">Reset</button>
+
+            </div>
+            <div class="cards" id="cards"></div>
+            <button id="show-more-btn" class="show-more-btn">show more</button>
+            <br>
+            <div class="main_inside mr">
+                <div class="btns">
+                    Type of graphics:
+                    <button class="filter-input-btn pie"> Pie</button>
+                    <button class="filter-input-btn linear"> Linear</button>
+                    <button class="filter-input-btn column"> Column</button>
+                </div>
+            </div>
+            <div class="chart" id="chartContainer">
+            </div>
+            <button class="to-the-top-btn" id="to-the-top-btn" onclick="scrollToTheTop()">▲</button>
+    </section>
+</body>
+
+</html>
