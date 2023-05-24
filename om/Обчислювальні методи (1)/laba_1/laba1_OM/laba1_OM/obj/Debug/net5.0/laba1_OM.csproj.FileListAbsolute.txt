@@ -1,0 +1,48 @@
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.exe
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.deps.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.runtimeconfig.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.runtimeconfig.dev.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\ref\laba1_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.pdb
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.csproj.AssemblyReference.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.AssemblyInfoInputs.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.AssemblyInfo.cs
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.csproj.CoreCompileInputs.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\ref\laba1_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.pdb
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\Новая папка\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.genruntimeconfig.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.exe
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.deps.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.runtimeconfig.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.runtimeconfig.dev.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\ref\laba1_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.pdb
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.csproj.AssemblyReference.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.AssemblyInfoInputs.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.AssemblyInfo.cs
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.csproj.CoreCompileInputs.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\ref\laba1_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.pdb
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.genruntimeconfig.cache
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.exe
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.deps.json
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.runtimeconfig.json
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.runtimeconfig.dev.json
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.dll
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\bin\Debug\net5.0\laba1_OM.pdb
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.csproj.AssemblyReference.cache
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.GeneratedMSBuildEditorConfig.editorconfig
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.AssemblyInfoInputs.cache
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.AssemblyInfo.cs
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.csproj.CoreCompileInputs.cache
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.dll
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\refint\laba1_OM.dll
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.pdb
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\laba1_OM.genruntimeconfig.cache
+H:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\laba_1\laba1_OM\laba1_OM\obj\Debug\net5.0\ref\laba1_OM.dll

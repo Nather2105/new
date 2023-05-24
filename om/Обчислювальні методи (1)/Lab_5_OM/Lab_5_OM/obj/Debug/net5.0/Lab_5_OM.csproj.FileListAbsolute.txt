@@ -1,0 +1,16 @@
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\bin\Debug\net5.0\Lab_5_OM.exe
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\bin\Debug\net5.0\Lab_5_OM.deps.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\bin\Debug\net5.0\Lab_5_OM.runtimeconfig.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\bin\Debug\net5.0\Lab_5_OM.runtimeconfig.dev.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\bin\Debug\net5.0\Lab_5_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\bin\Debug\net5.0\ref\Lab_5_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\bin\Debug\net5.0\Lab_5_OM.pdb
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\obj\Debug\net5.0\Lab_5_OM.csproj.AssemblyReference.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\obj\Debug\net5.0\Lab_5_OM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\obj\Debug\net5.0\Lab_5_OM.AssemblyInfoInputs.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\obj\Debug\net5.0\Lab_5_OM.AssemblyInfo.cs
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\obj\Debug\net5.0\Lab_5_OM.csproj.CoreCompileInputs.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\obj\Debug\net5.0\Lab_5_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\obj\Debug\net5.0\ref\Lab_5_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\obj\Debug\net5.0\Lab_5_OM.pdb
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\Lab_5_OM\Lab_5_OM\obj\Debug\net5.0\Lab_5_OM.genruntimeconfig.cache

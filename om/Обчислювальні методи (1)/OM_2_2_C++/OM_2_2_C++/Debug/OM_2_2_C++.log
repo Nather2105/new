@@ -1,0 +1,4 @@
+﻿  OM_2_2_C++.cpp
+D:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_2_2_C++\OM_2_2_C++\OM_2_2_C++.cpp(24,10): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+D:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_2_2_C++\OM_2_2_C++\OM_2_2_C++.cpp(67,6): warning C4101: 'method': unreferenced local variable
+  OM_2_2_C++.vcxproj -> D:\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_2_2_C++\Debug\OM_2_2_C++.exe

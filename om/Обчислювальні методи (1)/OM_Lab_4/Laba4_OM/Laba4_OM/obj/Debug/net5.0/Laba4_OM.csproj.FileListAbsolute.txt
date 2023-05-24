@@ -1,0 +1,16 @@
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\obj\Debug\net5.0\Laba4_OM.csproj.AssemblyReference.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\obj\Debug\net5.0\Laba4_OM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\obj\Debug\net5.0\Laba4_OM.AssemblyInfoInputs.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\obj\Debug\net5.0\Laba4_OM.AssemblyInfo.cs
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\obj\Debug\net5.0\Laba4_OM.csproj.CoreCompileInputs.cache
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\bin\Debug\net5.0\Laba4_OM.exe
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\bin\Debug\net5.0\Laba4_OM.deps.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\bin\Debug\net5.0\Laba4_OM.runtimeconfig.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\bin\Debug\net5.0\Laba4_OM.runtimeconfig.dev.json
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\bin\Debug\net5.0\Laba4_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\bin\Debug\net5.0\ref\Laba4_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\bin\Debug\net5.0\Laba4_OM.pdb
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\obj\Debug\net5.0\Laba4_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\obj\Debug\net5.0\ref\Laba4_OM.dll
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\obj\Debug\net5.0\Laba4_OM.pdb
+C:\Users\ursul\OneDrive\Робочий стіл\soft\Універ\2 курс 2 семестр\Обчислювальні методи\OM_Lab_4\Laba4_OM\Laba4_OM\obj\Debug\net5.0\Laba4_OM.genruntimeconfig.cache
