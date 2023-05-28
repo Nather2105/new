@@ -40,9 +40,10 @@ class BoundaryValueProblem:
             b_array[i] = -2 + h * h * self.q(xi)
             c_array[i] = 1 + 0.5 * h * self.p(xi)
 
+        print(a_array, b_array, c_array)
         return tridiagonal_matrix(a_array[1:], b_array, c_array[:-1]), d_array
 
-    # вирішення 
+    # вирішення
     def solve(self) -> np.ndarray:
         y = np.linalg.solve(*self.get_matrix())
         return np.concatenate(([self.u0], y, [self.u1]))
@@ -66,7 +67,7 @@ def max_deviation(sol1: np.ndarray, sol2: np.ndarray) -> float:
     sol2 = np.array([el for i, el in enumerate(sol2) if i % 2 == 0])
     return np.max(np.abs(sol2 - sol1))
 
-# функція мейн для старту програми 
+# функція мейн для старту програми
 if __name__ == '__main__':
     bvp = BoundaryValueProblem(x0=1, x1=2, u0=1.5, u1=4, n=10,
                             p=lambda x: 2,
@@ -87,4 +88,3 @@ if __name__ == '__main__':
     print(max_deviation(s1, s2))
 
     plt.show()
-
