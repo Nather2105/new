@@ -68,10 +68,15 @@ def max_deviation(sol1: np.ndarray, sol2: np.ndarray) -> float:
 
 # функція мейн для старту програми 
 if __name__ == '__main__':
-    bvp = BoundaryValueProblem(x0=1, x1=2, u0=1.5, u1=4, n=10,
-                            p=lambda x: 2,
-                            q=lambda x: -4 / x,
-                            r=lambda x: 2)
+    # bvp = BoundaryValueProblem(x0=1, x1=2, u0=1.5, u1=4, n=10,
+    #                         p=lambda x: 2,
+    #                         q=lambda x: -4 / x,
+    #                         r=lambda x: 2)
+    bvp = BoundaryValueProblem(x0=1, x1=2, u0=4, u1=9, n=10,
+                            p=lambda x: (2/(x+2)),
+                            q=lambda x: -x,
+                            r=lambda x: 6-x*((x+2)**(2)))
+
 
     print('Матриця N = 10', bvp.get_matrix()[0], sep='\n')
     s1 = bvp.solve()
