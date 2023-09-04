@@ -9,6 +9,7 @@ def simple_iteration(lambda_0, eps):
         lambda_next = g(lambda_prev)
     return lambda_next
 
+# формула із умови
 def g(x):
     return (15 - 7*(exp(x)-1))/ (10*exp(x)+7)
 
@@ -22,9 +23,12 @@ def newton_method(lambda0, eps):
         lambda_new = lambda_prev - f(lambda_prev) / df(lambda_prev)
     return lambda_new
 
+
+# формула із завдання
 def f(x):
     return 10 * x * exp(x) + 7 * (exp(x) - 1) - 15
 
+# похідна для формули Ньютона
 def df(x):
     return 10 * x * exp(x) + 10 * exp(x) + 7 * exp(x)
 
@@ -35,5 +39,5 @@ lambda_zero = 1.0
 lambda1 = simple_iteration(lambda_zero, epsilon)
 print(f"Simple method of iteration: {lambda1}")
 
-lambda2 = newton_method( lambda_zero, epsilon)
+lambda2 = newton_method( аlambda_zero, epsilon)
 print(f"Newton's method: {lambda2}")

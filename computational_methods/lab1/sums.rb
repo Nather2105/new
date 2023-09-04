@@ -5,7 +5,7 @@ while (true)
     puts "n must be number and not 0"
     next
   end
-  if n.to_f == 0 
+  if n.to_f == 0
     puts "n can`t be 0"
     next
   end
@@ -31,7 +31,7 @@ main_arr.each do |a|
     # sums << sum
     # dodanku << m
   end
-  # якщо є бажання подивитись на кожен із членів та на кожну суму цього виразу, розкоментуйте 26 27 35 36 37 38 стрічки 
+  # якщо є бажання подивитись на кожен із членів та на кожну суму цього виразу, розкоментуйте 26 27 35 36 37 38 стрічки
   # puts "dodanku:"
   # p dodanku
   # puts "sums:"
@@ -39,4 +39,3 @@ main_arr.each do |a|
 
   puts "final sum is #{sum}"
 end
-
